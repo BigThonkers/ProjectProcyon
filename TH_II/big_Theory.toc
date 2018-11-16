@@ -1,10 +1,15 @@
 \select@language {german}
 \contentsline {chapter}{\numberline {1}Mathe}{2}{chapter.1}
-\contentsline {subsubsection}{Produktformeln}{2}{section*.2}
-\contentsline {subsubsection}{Identit\IeC {\"a}ten}{2}{section*.3}
-\contentsline {subsubsection}{Kugelkoordinaten}{2}{section*.4}
-\contentsline {subsubsection}{Gradienten eines skalaren Feldes}{2}{section*.5}
-\contentsline {section}{\numberline {1.1}Integrals\IeC {\"a}tze}{2}{section.1.1}
-\contentsline {subsubsection}{Gau\IeC {\ss }scher Satz}{2}{section*.6}
-\contentsline {subsubsection}{Stokes Satz}{2}{section*.7}
-\contentsline {subsubsection}{Greensche Identit\IeC {\"a}ten}{3}{section*.8}
+\contentsline {section}{\numberline {1.1}Einf\IeC {\"u}hrung}{2}{section.1.1}
+\contentsline {subsubsection}{Dirac'sche Delta-Funktion}{2}{section*.2}
+\contentsline {subparagraph}{Definition}{2}{section*.3}
+\contentsline {subparagraph}{Formeln}{2}{section*.4}
+\contentsline {subparagraph}{Mehrdimensionale Delta-Funktion}{2}{section*.5}
+\contentsline {subsubsection}{Produktformeln}{3}{section*.6}
+\contentsline {subsubsection}{Identit\IeC {\"a}ten}{3}{section*.7}
+\contentsline {subsubsection}{Kugelkoordinaten}{3}{section*.8}
+\contentsline {subsubsection}{Gradienten eines skalaren Feldes}{3}{section*.9}
+\contentsline {section}{\numberline {1.2}Integrals\IeC {\"a}tze}{3}{section.1.2}
+\contentsline {subsubsection}{Gau\IeC {\ss }scher Satz}{3}{section*.10}
+\contentsline {subsubsection}{Stokes Satz}{3}{section*.11}
+\contentsline {subsubsection}{Greensche Identit\IeC {\"a}ten}{3}{section*.12}

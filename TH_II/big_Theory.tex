@@ -156,9 +156,51 @@
 \tableofcontents
 
 \chapter{Mathe}
+\section{Einführung}
+\paragraph{Dirac'sche Delta-Funktion}
+\subparagraph{Definition}
 
-$f, g$ sind skalare Felder, $\vec{F}, \vec{G}$ sind vektor Felder:
+\begin{align*}
+\int_{V} \text{d}^3r \; \delta(\vec{r}-\vec{r_0}) &\coloneqq
+	\begin{cases} 
+		1 \, , & r_0 \in V \\
+		0 \, , & \text{sonst}
+	\end{cases} \\
+\delta(\vec{r}-\vec{r_0}) &= 0 \quad \ \forall \: \vec{r} \neq \vec{r_0}
+\end{align*}
+
+\emph{Bemerkung}: Die $\delta$-Funktion ist keine Funktion im üblichen mathematischen Sinne. Man bezeichnet sie deshalb als \textbf{uneigentliche Funktion} oder als \textbf{Distribution}. Heuristisch:
+
+\begin{align*}
+&\delta(x) = 
+	\begin{cases}
+		+ \infty \, , & x = 0 \\
+		0 \, , & x \neq 0
+	\end{cases} \\
+&\int_{-\infty}^{\infty} \delta (x) \, dx = 1
+\end{align*}
+
+\subparagraph{Formeln}
+\begin{align*}
+\int_{a}^{b} f(x) \, \delta (x-x_0) \, dx &= 
+	\begin{cases}
+		f(x_0) \, , & a < x_0 < b \\
+		\frac{1}{2} f(x_0) \, , & x_0 = a \lor b \\
+		0 \, & \text{sonst}
+	\end{cases} \\
+`` \ f(x) \, \delta '(x-x_0) &= -f'(x) \, \delta (x-x_0) \ " \qquad \rlap{\text{\scriptsize{(heuristisch)}}} \\
+\delta (x - x_0) &= \frac{d}{dx} \Theta (x - x_0) \qquad \rlap{\scriptsize{($ \Theta $ \, \text{sei die Stufenfunktion)}}}
+\end{align*} 
+
+\subparagraph{Mehrdimensionale Delta-Funktion}
+\begin{align*}
+\llap{\text{Kartesisch (x,y,z)}} \qquad \delta(\vec{r} - \vec{r_0}) &= \delta(x - x_0) \, \delta(y - y_0) \, \delta(z - z_0) \\
+\llap{\text{Kugel $ (r, \theta, \varphi) $}} \qquad \delta(\vec{r} - \vec{r_0}) &= \frac{1}{r^2_0 \sin\theta_0} \, \delta(r - r_0) \, \delta(\theta - \theta _0) \, \delta(\varphi - \varphi _0) \\
+\llap{\text{Zylinder $ (\rho , \phi , z) $}} \qquad \delta(\vec{r} - \vec{r_0}) &= \frac{1}{\rho _0} \, \delta(\rho - \rho _0) \, \delta(\varphi - \varphi _0) \, \delta(z - z _0)
+\end{align*}
+
 \paragraph{Produktformeln}
+$f, g$ sind skalare Felder, $\vec{F}, \vec{G}$ sind vektor Felder:
 
 \begin{align*}
  	\vabla(fg) &= f \vabla (g) + g \vabla (f)\\
