@@ -1,0 +1,10 @@
+\select@language {german}
+\contentsline {chapter}{\numberline {1}Mathe}{2}{chapter.1}
+\contentsline {subsubsection}{Produktformeln}{2}{section*.2}
+\contentsline {subsubsection}{Identit\IeC {\"a}ten}{2}{section*.3}
+\contentsline {subsubsection}{Kugelkoordinaten}{2}{section*.4}
+\contentsline {subsubsection}{Gradienten eines skalaren Feldes}{2}{section*.5}
+\contentsline {section}{\numberline {1.1}Integrals\IeC {\"a}tze}{2}{section.1.1}
+\contentsline {subsubsection}{Gau\IeC {\ss }scher Satz}{2}{section*.6}
+\contentsline {subsubsection}{Stokes Satz}{2}{section*.7}
+\contentsline {subsubsection}{Greensche Identit\IeC {\"a}ten}{3}{section*.8}
