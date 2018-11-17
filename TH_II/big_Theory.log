@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.11.16)  16 NOV 2018 21:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.11.17)  17 NOV 2018 20:44
 entering extended mode
 **./big_Theory.tex
 (big_Theory.tex
@@ -1205,60 +1205,72 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 159.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 182.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 182.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 182.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 196.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 196.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 196.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 196.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 196.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 196.
 [2
 
 ]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 241.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 241.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 241.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 267.
  [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 309.
+ [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
  (big_Theory.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
-
-
-Package rerunfilecheck Warning: File `big_Theory.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `big_Theory.out':
-(rerunfilecheck)             Before: 3BFA2C714F7D53CE5801B4EA1A54B2B3;104
-(rerunfilecheck)             After:  2657E8F63460C742A10036F214C1FC31;164.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
+Package rerunfilecheck Info: File `big_Theory.out' has not changed.
+(rerunfilecheck)             Checksum: 815C5637224FBF5EDE122108ACF2DFB7;224.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
  ) 
 Here is how much of TeX's memory you used:
- 23351 strings out of 493312
- 460273 string characters out of 3138898
- 537558 words of memory out of 3000000
- 26464 multiletter control sequences out of 15000+200000
+ 23358 strings out of 493312
+ 460349 string characters out of 3138898
+ 540558 words of memory out of 3000000
+ 26466 multiletter control sequences out of 15000+200000
  23190 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,82p,931b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1285,9 +1297,9 @@ ublic/amsfonts/cmextra/cmmib8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on big_Theory.pdf (4 pages, 207465 bytes).
+Output written on big_Theory.pdf (5 pages, 219003 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
