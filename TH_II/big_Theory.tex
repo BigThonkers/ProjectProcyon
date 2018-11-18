@@ -155,7 +155,7 @@
 \maketitle
 \tableofcontents
 
-\chapter{Mathe}
+\chapter{Elektrostatik}
 \section{Grundbegriffe}
 
 \paragraph{Ladung}
@@ -186,9 +186,9 @@
 
 \paragraph{Skalare Elektrische Potential}
 \begin{align*}
-\llap{im bel. Raumpunkt kontinuierlich} \qquad \varphi(\vec{r}) \, &= \, \frac{1}{4\pi\epsilon_0} \, \int \frac{\rho(\vec{r}')}{\left| \vec{r} - \vec{r}'\right|}\\
+\llap{im bel. Raumpunkt kontinuierlich} \qquad \varphi(\vec{r}) \, &= \, \frac{1}{4\pi\epsilon_0} \, \int \frac{\rho(\vec{r}')}{\left| \vec{r} - \vec{r}'\right|}\;\mathrm{d}^3r'\\
 \llap{im bel. Raumpunkt diskret} \qquad \varphi(\vec{r}) \, &= \, \frac{1}{4\pi\epsilon_0} \, \sum_{j=1}^{n}\, \frac{q_j}{\left| \vec{r} - \vec{r}_j\right|}\\
-\llap{Spannung / Potentialdifferenz} \qquad U(\vec{r},\, \vec{r}_0)\, &=\, \varphi(\vec{r})\, -\, \varphi(\vec{r}_0)\, =\, -\, \int_{\vec{r}_0}^{\vec{r}}\, \vec{E}(\vec{r}')\; d\vec{r}'\\
+\llap{Spannung / Potentialdifferenz} \qquad U(\vec{r},\, \vec{r}_0)\, &=\, \varphi(\vec{r})\, -\, \varphi(\vec{r}_0)\, =\, -\, \int_{\vec{r}_0}^{\vec{r}}\, \vec{E}(\vec{r}')\; \mathrm{d}\vec{r}'\\
 \end{align*}
 
 \paragraph{Operator Nomenklatur}
@@ -231,7 +231,8 @@
 		0 \, & \text{sonst}
 	\end{cases} \\
 `` \ f(x) \, \delta '(x-x_0) &= -f'(x) \, \delta (x-x_0) \ " \qquad \rlap{\text{\scriptsize{(heuristisch)}}} \\
-\delta (x - x_0) &= \frac{d}{dx} \Theta (x - x_0) \qquad \rlap{\scriptsize{($ \Theta $ \, \text{sei die Stufenfunktion)}}}
+\delta (x - x_0) &= \frac{d}{dx} \Theta (x - x_0) \qquad \rlap{\scriptsize{($ \Theta $ \, \text{sei die Stufenfunktion)}}}\\
+\delta(\vec{r}-\vec{r}')\,&=\,-\,\frac{1}{4\pi}\vec{\Delta}\,\frac{1}{|\vec{r}-\vec{r}'|}
 \end{align*} 
 
 \subparagraph{Mehrdimensionale Delta-Funktion}
@@ -268,12 +269,15 @@ $$
 \end{pmatrix}
 =
 \begin{pmatrix}
-	\rho \sin \phi \cos \theta\\
-	\rho \sin \phi \sin \theta\\
-	\rho \cos \phi
+	r \sin \theta \cos \varphi\\
+	r \sin \theta \sin \varphi\\
+	r \cos \theta
 \end{pmatrix}
-, \qquad \int\limits_{-\infty}^{+\infty} f(\vec{r})\ \textrm{d}r = \int\limits_{0}^{2 \pi} \int\limits_{0}^{\pi} \int\limits_{0}^{\infty} f(r,\phi,\theta) r^2 \sin \phi\ \textrm{d}r \textrm{d}\phi \textrm{d}\theta
+, \qquad \int\limits_{-\infty}^{+\infty} f(\vec{r})\ \textrm{d}r = \int\limits_{0}^{2 \pi} \int\limits_{0}^{\pi} \int\limits_{0}^{\infty} f(r,\theta,\varphi) r^2 \sin \theta\ \textrm{d}r \textrm{d}\theta \textrm{d}\varphi
 $$
+
+wobei:\\
+$r\in \lbrack0\, ,\,\infty)\, ,\quad \Theta\in\lbrack 0\, ,\, \pi\rbrack\, , \quad \varphi\in\lbrack 0\, ,\, 2\pi) $
 
 \paragraph{Gradienten eines skalaren Feldes}
 
@@ -281,9 +285,29 @@ $$\vabla g(\vec{r}) = \sum_i \vec{e}_i \frac{1}{\left|\prt{\vec{r}}{u_i}\right|}
 
 
 \section{Integralsätze}
+\paragraph{Fluss}
+\subparagraph{Definition}
+Sei $\vec{a}(\vec{r})\,=\,(a_1(\vec{r}),\,a_2(\vec{r}),\, a_3(\vec{r}))$ ein Vektorfeld, $V$ ein Volumen und $S(V)$ die Oberfläche. Dann heisst $\Phi_S(\vec{a})$ der Fluss ($eng.$ flux) von $\vec{a}(\vec{r})$ durch die Fläche S wenn es gilt:
+\hfill \break
+\[\Phi_S(\vec{a})\,=\,\int_{S}\,\vec{a}(\vec{r})\;\mathrm{d}\vec{f}\]
 
-\paragraph{Gaußscher Satz}
-$$\int_{V} \vabla \cdot \vec{E}(\vec{r})\ \mathrm{d}^{3}r = \oint_{F}\vec{E}\ \mathrm{d}\vec{f}$$
+\subparagraph{Geschlossene Fläche} Das Oberflächenintegral über eine geschlossene Fläche wird durch ein spezielles Integralzeichen symbolisiert:
+\[\Phi_S(\vec{a})\,=\,\oint_S\,\vec{a}(\vec{r})\;\mathrm{d}\vec{f}\]
+
+\paragraph{Gauß'sche Satz}
+\subparagraph{Definition} Der elektrische Nettofluss $\Phi$ durch eine hypothetische geschlossene Oberfläche $S$ ist gleich $\frac{1}{\epsilon_0}$ mal die elektrische Nettoladung $Q$ innerhalb dieser geschlossenen Oberfläche.
+
+\subparagraph{Integrale Form}
+\[\Phi\,=\,\oint_S\, \vec{E}\; \mathrm{d}\vec{f}\,=\,\frac{Q}{\epsilon_0}\]
+Wobei $Q$ die Gesamtladung innerhalb $V$ ist.
+
+\subparagraph{Differentielle Form}
+\[\vec{\nabla}\cdot\vec{E}\,=\,\frac{\rho}{\epsilon_0}\]
+Wobei $\rho$ die Gesamtladungsdichte (pro Einheit Volumen) ist.
+
+\subparagraph{Beziehung}
+$$\int_{V} \vabla \cdot \vec{E}\;\mathrm{d}^{3}r = \oint_{S}\vec{E}\;\mathrm{d}\vec{f}$$
+\bigskip
 
 \paragraph{Stokes Satz}
 $$\int_{F} \vabla \times \vec{a}\ \mathrm{d}\vec{f} = \int_{\partial F}\vec{a}\ \mathrm{d}\vec{r}$$
@@ -294,7 +318,10 @@ $$\int_{V} \vabla g(\vec{r}) \cdot \vabla h(\vec{r}) + g(\vec{r})\Delta h(\vec{r
 
 $$\int_{V} g(\vec{r}) \Delta h(\vec{r}) g(\vec{r}) - h(\vec{r}) \Delta g(\vec{r})\ \mathrm{d}^{3}r = \oint_{\partial V}g(\vec{r})\vabla h(\vec{r}) - h(\vec{r}) \vabla g(\vec{r})\ \mathrm{d}\vec{f}$$
 
-\section{Incomplete/Unassigned:}
+\section{Maxwell-Gleichungen der Elektrostatik}
+
+
+\section{Incomplete/Unassigned}
 \begin{align*}
 \vabla\frac{1}{|\vec{r}-\vec{r}'|}&=-\vabla'\frac{1}{|\vec{r}-\vec{r}'|}\\
 \int_a^bu(x)v'(x)\mathrm{d}x&=[u(x)v(x)]_a^b-\int_a^bu'(x)v(x)\mathrm{d}x\\
@@ -304,6 +331,12 @@ $$\int_{V} g(\vec{r}) \Delta h(\vec{r}) g(\vec{r}) - h(\vec{r}) \Delta g(\vec{r}
 H(x)&\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0\end{cases}
 \end{align*}
 
+\begin{thebibliography}{9}
+\bibitem{homkugelpot}
+OnlineMathe das mathe-forum
+\textit{Elektrisches Potential einer homogen geladenen Kugel}
+\\\texttt{https://www.onlinemathe.de/forum/Potential-einer-homogen-geladenen-Kugel}
+\end{thebibliography}
 
 
 
