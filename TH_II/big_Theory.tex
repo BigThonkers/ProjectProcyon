@@ -162,13 +162,14 @@
 \begin{align*}
 \llap{\text{diskrete Ladungsverteilung}} \qquad Q &= \sum_{i = 1}^{n} q_i \\
 \llap{\text{kontinuierliche Ladungsverteilung}} \qquad Q &= \int_{V} \rho ( \vec{r} ) \; \text{d}^3r \\
-\llap{\text{Punktladung}} \qquad \rho ( \vec{r} ) &= q \delta ( \vec{r} - \vec{r}_0)
+\llap{\text{Punktladung}} \qquad \rho ( \vec{r} ) &= q \delta ( \vec{r} - \vec{r}_0)\\
+\llap{Poisson-Gleichung}\qquad\Delta\Phi(\vec{r})&=-\frac{1}{\epsilon_0}\rho(\vec{r})\\
 \end{align*}
 
 \paragraph{Coulomb’sches Gesetz}
 \begin{align*}
 \llap{\text{zwei Punktladungen}} \qquad \vec{F}_{12} &= \frac{1}{4 \pi \epsilon_0} \, q_1 q_2 \, \frac{\vec{r}_1 - \vec{r}_2}{\left| \vec{r}_1 - \vec{r}_2\right|^3} = -\vec{F}_{21} \\
-\llap{\text{n Punktladungen}} \qquad \vec{F}_1 &= \frac{1}{4 \pi \epsilon_0} \, q_1 \sum_{j=2}^{n} q_j \, \frac{\vec{r} - \vec{r}_j}{\left| \vec{r} - \vec{r}_j\right|^3}
+\llap{$n$\text{ Punktladungen}} \qquad \vec{F}_1 &= \frac{1}{4 \pi \epsilon_0} \, q_1 \sum_{j=2}^{n} q_j \, \frac{\vec{r} - \vec{r}_j}{\left| \vec{r} - \vec{r}_j\right|^3}
 \end{align*}
 
 \paragraph{Elektrisches Feld}
@@ -202,6 +203,8 @@
 	\end{cases} \\
 &\int_{-\infty}^{\infty} \delta (x) \, dx = 1
 \end{align*}
+
+%\[H(x)\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0\end{cases}\]
 
 \subparagraph{Formeln}
 \begin{align*}
