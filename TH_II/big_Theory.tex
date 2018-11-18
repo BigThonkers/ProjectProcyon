@@ -162,14 +162,16 @@
 \begin{align*}
 \llap{\text{diskrete Ladungsverteilung}} \qquad Q &= \sum_{i = 1}^{n} q_i \\
 \llap{\text{kontinuierliche Ladungsverteilung}} \qquad Q &= \int_{V} \rho ( \vec{r} ) \; \text{d}^3r \\
-\llap{\text{Punktladung}} \qquad \rho ( \vec{r} ) &= q \delta ( \vec{r} - \vec{r}_0)\\
-\llap{Poisson-Gleichung}\qquad\Delta\Phi(\vec{r})&=-\frac{1}{\epsilon_0}\rho(\vec{r})\\
+\llap{\text{Punktladung}} \quad\ \rho ( \vec{r} ) &= q \delta ( \vec{r} - \vec{r}_0)\\
+\llap{$n$ Punktladungen}\quad \rho(\vec{r}')\, &=\, \sum_{j=1}^{n}\, q_j\, \delta (\vec{r}'-\,\vec{r}_j)
 \end{align*}
 
 \paragraph{Coulomb’sches Gesetz}
 \begin{align*}
 \llap{\text{zwei Punktladungen}} \qquad \vec{F}_{12} &= \frac{1}{4 \pi \epsilon_0} \, q_1 q_2 \, \frac{\vec{r}_1 - \vec{r}_2}{\left| \vec{r}_1 - \vec{r}_2\right|^3} = -\vec{F}_{21} \\
-\llap{$n$\text{ Punktladungen}} \qquad \vec{F}_1 &= \frac{1}{4 \pi \epsilon_0} \, q_1 \sum_{j=2}^{n} q_j \, \frac{\vec{r} - \vec{r}_j}{\left| \vec{r} - \vec{r}_j\right|^3}
+\llap{$n$ Punktladungen} \qquad \vec{F}_1 &= \frac{1}{4 \pi \epsilon_0} \, q_1 \sum_{j=2}^{n} q_j \, \frac{\vec{r} - \vec{r}_j}{\left| \vec{r} - \vec{r}_j\right|^3} \\
+\llap{Beziehung zur $E$-Feld} \quad\, \vec{F}(\vec{r}) \, &=\, q \, \vec{E}(\vec{r})\\
+\llap{Beziehung zur Potential} \quad \vec{F}(\vec{r}) &=\, -\,\vec{\nabla}\, q\,\varphi(\vec{r})
 \end{align*}
 
 \paragraph{Elektrisches Feld}
@@ -177,7 +179,23 @@
 \llap{\text{im bel. Raumpunkt}} \qquad \vec{E} (\vec{r}) &= \frac{q}{4 \pi \epsilon_0} \, \frac{\vec{r} - \vec{r}_0}{\left| \vec{r} - \vec{r}_0\right|^3} \\
 \llap{\text{diskrete Ladungsverteilung}} \qquad \vec{E}(\vec{r}) &= \frac{1}{4 \pi \epsilon_0} \, \sum_{j=2}^{n} q_j \, \frac{\vec{r} - \vec{r}_j}{\left| \vec{r} - \vec{r}_j\right|^3} \\
 \llap{\text{kontinuierliche Ladungsverteilung}} \qquad \vec{E}(\vec{r}) &= \frac{1}{4 \pi \epsilon_0} \int \rho (\vec{r}') \, \frac{\vec{r} - \vec{r}'}{\left| \vec{r} - \vec{r}'\right|^3} \; \text{d}^3r' \\
-\llap{\text{Gradientenfeld}} \qquad \vec{E} (\vec{r}) &= \; - \nabla \, \varphi (\vec{r})
+\llap{\scriptsize(Identität)} \qquad\ \ \Bigg\downarrow \quad \rlap{$ \frac{\vec{r} - \vec{r}'}{\left| \vec{r} - \vec{r}'\right|^3}  \, = \, -\nabla_r\, \frac{1}{\left| \vec{r} - \vec{r}'\right|} $ } \\
+\llap{\text{Beziehung zur Potential}} \qquad \vec{E} (\vec{r}) &= \; - \nabla \, \varphi (\vec{r})\\
+\implies \qquad \vec{\nabla}\times& q\vec{E}\, =\, 0 \qquad \rlap{\scriptsize{d.h., die Coulomb-Kraft ist konservativ}}
+\end{align*}
+
+\paragraph{Skalare Elektrische Potential}
+\begin{align*}
+\llap{im bel. Raumpunkt kontinuierlich} \qquad \varphi(\vec{r}) \, &= \, \frac{1}{4\pi\epsilon_0} \, \int \frac{\rho(\vec{r}')}{\left| \vec{r} - \vec{r}'\right|}\\
+\llap{im bel. Raumpunkt diskret} \qquad \varphi(\vec{r}) \, &= \, \frac{1}{4\pi\epsilon_0} \, \sum_{j=1}^{n}\, \frac{q_j}{\left| \vec{r} - \vec{r}_j\right|}\\
+\llap{Spannung / Potentialdifferenz} \qquad U(\vec{r},\, \vec{r}_0)\, &=\, \varphi(\vec{r})\, -\, \varphi(\vec{r}_0)\, =\, -\, \int_{\vec{r}_0}^{\vec{r}}\, \vec{E}(\vec{r}')\; d\vec{r}'\\
+\end{align*}
+
+\paragraph{Operator Nomenklatur}
+\begin{align*}
+\text{div}\, \vec{A} \, &= \, \vec{\nabla}\cdot \vec{A} \\
+\text{grad}\,\vec{A} \, &= \, \vec{\nabla}\vec{A} \\
+\llap{\scriptsize{($eng.$ curl)}} \quad \text{rot}\, \vec{A} \, &= \, \vec{\nabla}\times \vec{A}
 \end{align*}
 
 \section{Einführung}
@@ -203,8 +221,6 @@
 	\end{cases} \\
 &\int_{-\infty}^{\infty} \delta (x) \, dx = 1
 \end{align*}
-
-%\[H(x)\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0\end{cases}\]
 
 \subparagraph{Formeln}
 \begin{align*}
@@ -278,6 +294,15 @@ $$\int_{V} \vabla g(\vec{r}) \cdot \vabla h(\vec{r}) + g(\vec{r})\Delta h(\vec{r
 
 $$\int_{V} g(\vec{r}) \Delta h(\vec{r}) g(\vec{r}) - h(\vec{r}) \Delta g(\vec{r})\ \mathrm{d}^{3}r = \oint_{\partial V}g(\vec{r})\vabla h(\vec{r}) - h(\vec{r}) \vabla g(\vec{r})\ \mathrm{d}\vec{f}$$
 
+\section{Incomplete/Unassigned:}
+\begin{align*}
+\vabla\frac{1}{|\vec{r}-\vec{r}'|}&=-\vabla'\frac{1}{|\vec{r}-\vec{r}'|}\\
+\int_a^bu(x)v'(x)\mathrm{d}x&=[u(x)v(x)]_a^b-\int_a^bu'(x)v(x)\mathrm{d}x\\
+\llap{Dirichlet Randwertproblem}\qquad \Delta_r\mathcal{G}(\vec{r},\vec{r}')&=-\frac{1}{\epsilon_0}\delta(\vec{r}-\vec{r}')\\
+\mathcal{G}(\vec{r},\vec{r}')&=\frac{1}{q}\Phi(\vec{r}\\
+\llap{Poisson-Gleichung}\qquad\Delta\Phi(\vec{r})&=-\frac{1}{\epsilon_0}\rho(\vec{r})\\
+H(x)&\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0\end{cases}
+\end{align*}
 
 
 
