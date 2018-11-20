@@ -1,6 +1,6 @@
 
 EX_III/.DS_Store
-
+*.DS_Store
 *.aux
 *.log
 *.gz
