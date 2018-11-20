@@ -285,7 +285,7 @@ $$\vabla g(\vec{r}) = \sum_i \vec{e}_i \frac{1}{\left|\prt{\vec{r}}{u_i}\right|}
 
 
 \section{Integralsätze}
-\paragraph{Fluss}
+\paragraph{Einleitung: Fluss}
 \subparagraph{Definition}
 Sei $\vec{a}(\vec{r})\,=\,(a_1(\vec{r}),\,a_2(\vec{r}),\, a_3(\vec{r}))$ ein Vektorfeld, $V$ ein Volumen und $S(V)$ die Oberfläche. Dann heisst $\Phi_S(\vec{a})$ der Fluss ($eng.$ flux) von $\vec{a}(\vec{r})$ durch die Fläche S wenn es gilt:
 \hfill \break
@@ -294,7 +294,15 @@ Sei $\vec{a}(\vec{r})\,=\,(a_1(\vec{r}),\,a_2(\vec{r}),\, a_3(\vec{r}))$ ein Vek
 \subparagraph{Geschlossene Fläche} Das Oberflächenintegral über eine geschlossene Fläche wird durch ein spezielles Integralzeichen symbolisiert:
 \[\Phi_S(\vec{a})\,=\,\oint_S\,\vec{a}(\vec{r})\;\mathrm{d}\vec{f}\]
 
-\paragraph{Gauß'sche Satz}
+\paragraph{Satz von Stokes}
+\subparagraph{Bedeutung}
+Ganz allgemein gesagt handelt es sich um einen sehr grundlegenden Satz über die Integration von Differentialformen. Es geht darum, $n$-dimensionale Volumenintegrale über das Innere in $(n-1)$-dimensionale Randintegrale über die Oberfläche des Volumenstücks umzuwandeln. Für uns sind die Spezialfälle am wichtigsten, bei denen der Gauß'sche Satz und der Kelvin-Stokes'sche Satz (Rotationssatz).
+
+\subparagraph{Formel}
+$$\int_{F} \vabla \times \vec{a}\ \mathrm{d}\vec{f} = \int_{\partial F}\vec{a}\ \mathrm{d}\vec{r}$$
+\hfill \break
+
+\paragraph{Gauß'sche Satz} \scriptsize{($eng.$ Divergence Theorem)}
 \subparagraph{Definition} Der elektrische Nettofluss $\Phi$ durch eine hypothetische geschlossene Oberfläche $S$ ist gleich $\frac{1}{\epsilon_0}$ mal die elektrische Nettoladung $Q$ innerhalb dieser geschlossenen Oberfläche.
 
 \subparagraph{Integrale Form}
@@ -307,10 +315,7 @@ Wobei $\rho$ die Gesamtladungsdichte (pro Einheit Volumen) ist.
 
 \subparagraph{Beziehung}
 $$\int_{V} \vabla \cdot \vec{E}\;\mathrm{d}^{3}r = \oint_{S}\vec{E}\;\mathrm{d}\vec{f}$$
-\bigskip
-
-\paragraph{Stokes Satz}
-$$\int_{F} \vabla \times \vec{a}\ \mathrm{d}\vec{f} = \int_{\partial F}\vec{a}\ \mathrm{d}\vec{r}$$
+\hfill \break
 
 \paragraph{Greensche Identitäten}
 
