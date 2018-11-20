@@ -151,7 +151,6 @@
 	{\Huge Theoretische Physik II\\[3pt]Elektrodynamik}\\[1em]
 	{\Large Vorlesung von Prof. Dr. Michael Thoss im Wintersemester 2018}}
 \author{Andréz Gockel \\ Patrick Munnich \\ Daniil Aktanka}
-\date{15.10.2018}
 \maketitle
 \tableofcontents
 
@@ -253,7 +252,7 @@ $r\in \lbrack0\, ,\,\infty)\, ,\quad \Theta\in\lbrack 0\, ,\, \pi\rbrack\, , \qu
 \delta(\vec{r}-\vec{r}_0) &= 0 \quad \ \forall \: \vec{r} \neq \vec{r_0}
 \end{align*}
 
-\emph{Bemerkung}: Die $\delta$-Funktion ist keine Funktion im üblichen mathematischen Sinne. Man bezeichnet sie deshalb als \textbf{uneigentliche Funktion} oder als \textbf{Distribution}. Heuristisch:
+\emph{Bemerkung:} Die $\delta$-Funktion ist keine Funktion im üblichen mathematischen Sinne. Man bezeichnet sie deshalb als \textbf{uneigentliche Funktion} oder als \textbf{Distribution}. Heuristisch:
 
 \begin{align*}
 &\delta(x) = 
@@ -288,7 +287,7 @@ $r\in \lbrack0\, ,\,\infty)\, ,\quad \Theta\in\lbrack 0\, ,\, \pi\rbrack\, , \qu
 \paragraph{Einleitung: Fluss}
 \subparagraph{Definition}
 Sei $\vec{a}(\vec{r})\,=\,(a_1(\vec{r}),\,a_2(\vec{r}),\, a_3(\vec{r}))$ ein Vektorfeld, $V$ ein Volumen und $S(V)$ die Oberfläche. Dann heisst $\Phi_S(\vec{a})$ der Fluss ($eng.$ flux) von $\vec{a}(\vec{r})$ durch die Fläche S wenn es gilt:
-\hfill \break
+
 \[\Phi_S(\vec{a})\,=\,\int_{S}\,\vec{a}(\vec{r})\;\mathrm{d}\vec{f}\]
 
 \subparagraph{Geschlossene Fläche} Das Oberflächenintegral über eine geschlossene Fläche wird durch ein spezielles Integralzeichen symbolisiert:
@@ -298,12 +297,15 @@ Sei $\vec{a}(\vec{r})\,=\,(a_1(\vec{r}),\,a_2(\vec{r}),\, a_3(\vec{r}))$ ein Vek
 \subparagraph{Bedeutung}
 Ganz allgemein gesagt handelt es sich um einen sehr grundlegenden Satz über die Integration von Differentialformen. Es geht darum, $n$-dimensionale Volumenintegrale über das Innere in $(n-1)$-dimensionale Randintegrale über die Oberfläche des Volumenstücks umzuwandeln. Für uns sind die Spezialfälle am wichtigsten, bei denen der Gauß'sche Satz und der Kelvin-Stokes'sche Satz (Rotationssatz).
 
-\subparagraph{Formel}
-$$\int_{F} \vabla \times \vec{a}\ \mathrm{d}\vec{f} = \int_{\partial F}\vec{a}\ \mathrm{d}\vec{r}$$
-\hfill \break
+\subparagraph{Rotationssatz} (\textit{auch} Klassische Integralsatz von Stokes) \hfill \break
+
+Seien $\vec{a}(\vec{r})$ ein hinreichend oft differenzierbares Vektorfeld und F eine Fläche mit dem Rand $C(F) = \delta F$. Dann gilt:
+
+$$\int_{F} \vabla \times \vec{a}\; \mathrm{d}\vec{f} = \int_{\partial F}\vec{a}\; \mathrm{d}\vec{r}$$
 
 \paragraph{Gauß'sche Satz}
 ($eng.$ Divergence Theorem)
+
 \subparagraph{Definition} Der elektrische Nettofluss $\Phi$ durch eine hypothetische geschlossene Oberfläche $S$ ist gleich $\frac{1}{\epsilon_0}$ mal die elektrische Nettoladung $Q$ innerhalb dieser geschlossenen Oberfläche.
 
 \subparagraph{Integrale Form}
@@ -318,11 +320,45 @@ Wobei $\rho$ die Gesamtladungsdichte (pro Einheit Volumen) ist.
 $$\int_{V} \vabla \cdot \vec{E}\;\mathrm{d}^{3}r = \oint_{S}\vec{E}\;\mathrm{d}\vec{f}$$
 \hfill \break
 
-\paragraph{Greensche Identitäten}
+\paragraph{Greensche Sätze}
+Die Green’sche Sätze (Identitäten) lassen sich aus Anwendungen des Gauß’schen Satzes ableiten. Hierfür wurde die folgende Definition der Normalableitung benutzt.
 
-$$\int_{V} \vabla g(\vec{r}) \cdot \vabla h(\vec{r}) + g(\vec{r})\Delta h(\vec{r})\ \mathrm{d}^{3}r = \oint_{\partial V} g(\vec{r}) \vabla h(\vec{r})\ \mathrm{d}\vec{f}$$
+\subparagraph{Normalableitung} \hfill \break
+Sei $\psi$ ein mindestens zweimal stetig differenzierbares, skalares Feld auf einer Fläche $S(V)$. Sei $\vec{n}(\vec{r})$ eine (ortsabhängige) Flächennormale. Dann gilt:
+\[\vec{\nabla}\psi\cdot\vec{n}\,\equiv\,\frac{\partial\psi}{\partial n}\]
 
-$$\int_{V} g(\vec{r}) \Delta h(\vec{r}) g(\vec{r}) - h(\vec{r}) \Delta g(\vec{r})\ \mathrm{d}^{3}r = \oint_{\partial V}g(\vec{r})\vabla h(\vec{r}) - h(\vec{r}) \vabla g(\vec{r})\ \mathrm{d}\vec{f}$$
+\subparagraph{1. Green'sche Identität}
+\[\int_V(\varphi\vec{\Delta}\psi\,+\,(\vabla\psi\cdot\vabla\varphi))\;\mathrm{d}^3r\,=\,\oint_{S}\varphi\frac{\partial\psi}{\partial n}\;\mathrm{d}f\]
+
+Wobei $\varphi$ und $\psi$ Skalarfunktionnen sind, angennomen sei $\varphi$ einfach und $\psi$ zweifach stetig differenzierbar.
+
+\subparagraph{2. Green'sche Identität}
+\[\int_V (\varphi\vec{\Delta}\psi-\psi\vec{\Delta}\varphi)\;\mathrm{d}^3r\,=\,\oint_{S}\bigg(\varphi\frac{\partial\psi}{\partial n}-\psi\frac{\partial\varphi}{\partial n}\bigg)\;\mathrm{d}^3f\]
+
+Wobei $\varphi$ und $\psi$ beide zweifach stetig differenzierbar sind.
+
+\bigskip
+\emph{Bemerkung:} Die beiden obengenannent Green'schen Identitäten sind Speziallfällen und gelten nur unter Bedinungen.
+
+\section{Helmholtz-Zerlegung}
+\paragraph{Bedeutung}
+Zusammengefasst besagen der Satz, dass unter gewissen Voraussetzungen jedes Vektorfeld $\vec{a}(\vec{r})$ eindeutig durch sein Quellenfeld $\vabla\cdot\vec{a}(\vec{r})$ und sein Wirbelfeld $\vabla\times\vec{a}(\vec{r})$ bestimmt ist. Oder anders ausgedrückt: (fast) jedes Vektorfeld lässt sich eindeutig als Summe eines wirbelfreien und eines quellenfreien Anteils darstellen.
+
+\paragraph{Aussage des Theorems}
+Sei $F$ ein zweifach stetig differenzierbares Vektorfeld über ein beschränktes Gebiet im $\mathbb{R}^3$ und $S$ eine Oberfläche welche dieses Gebiet umschliesst. Dann kann $F$ in eine curl-freie Komponente und eine divergenzfreie Komponente zerlegt werden:
+
+\[\vec{F}\,=\,-\vabla\Phi+\vabla\times\vec{A}\]
+
+Wobei die beiden einander ergänzenden Potentiale $\Phi$ und $A$ lassen sich durch die folgenden Integrale aus dem Feld $F$, über das die Felder enthaltende Volumen $V$, gewinnen:
+
+\[
+\Phi\,=\,\frac{1}{4\pi}\int_V \frac{\vabla '\cdot \vec{F}(\vec{r}')}{\left|\vec{r}-\vec{r}'\right|}\;\mathrm{d}V' \qquad\quad
+\vec{A}(\vec{r})\,=\,\frac{1}{4\pi}\int_V \frac{\vabla '\times \vec{F}(\vec{r}')}{\left|\vec{r}-\vec{r}'\right|}\;\mathrm{d}V'
+\]
+
+
+
+
 
 \newpage
 \section{Maxwell-Gleichungen der Elektrostatik}
@@ -344,34 +380,4 @@ OnlineMathe das mathe-forum
 \textit{Elektrisches Potential einer homogen geladenen Kugel}
 \\\texttt{https://www.onlinemathe.de/forum/Potential-einer-homogen-geladenen-Kugel}
 \end{thebibliography}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \end{document}
