@@ -1,2 +1,8 @@
 
 EX_III/.DS_Store
+
+*.aux
+*.log
+*.gz
+*.out
+*.toc
