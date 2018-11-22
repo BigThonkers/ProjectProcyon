@@ -193,9 +193,13 @@
 
 \paragraph{Operator Nomenklatur}
 \begin{align*}
-\text{div}\, \vec{A} \, &= \, \vec{\nabla}\cdot \vec{A} \\
+\text{div}\, \vec{A} \, &= \, \vec{\nabla}\cdot \vec{A} \qquad \rlap{\scriptsize{$\begin{cases} 
+		>0 \, , & \mathrm{Quelle} \\
+		=0 \, , & \mathrm{quellenfrei}\\
+		<0\, , & \mathrm{Senke}
+	\end{cases}$}} \\
 \text{grad}\,\vec{A} \, &= \, \vec{\nabla}\vec{A} \\
-\llap{\scriptsize{($eng.$ curl)}} \quad \text{rot}\, \vec{A} \, &= \, \vec{\nabla}\times \vec{A}
+\llap{\scriptsize{($eng.$ curl)}} \quad \text{rot}\, \vec{A} \, &= \, \vec{\nabla}\times \vec{A} \qquad \rlap{\scriptsize{Wirbel}}
 \end{align*}
 
 \paragraph{Produktformeln}
@@ -273,7 +277,7 @@ $r\in \lbrack0\, ,\,\infty)\, ,\quad \Theta\in\lbrack 0\, ,\, \pi\rbrack\, , \qu
 	\end{cases} \\
 `` \ f(x) \, \delta '(x-x_0) &= -f'(x) \, \delta (x-x_0) \ " \qquad \rlap{\text{\scriptsize{(heuristisch)}}} \\
 \delta (x - x_0) &= \frac{d}{dx} \Theta (x - x_0) \qquad \rlap{\scriptsize{($ \Theta $ \, \text{sei die Stufenfunktion)}}}\\
-\delta(\vec{r}-\vec{r}')\,&=\,-\,\frac{1}{4\pi}\vec{\Delta}\,\frac{1}{|\vec{r}-\vec{r}'|}
+\delta(\vec{r}-\vec{r}')\,&=\,-\,\frac{1}{4\pi}\Delta\,\frac{1}{|\vec{r}-\vec{r}'|}
 \end{align*} 
 
 \subparagraph{Mehrdimensionale Delta-Funktion}
@@ -328,12 +332,12 @@ Sei $\psi$ ein mindestens zweimal stetig differenzierbares, skalares Feld auf ei
 \[\vec{\nabla}\psi\cdot\vec{n}\,\equiv\,\frac{\partial\psi}{\partial n}\]
 
 \subparagraph{1. Green'sche Identität}
-\[\int_V(\varphi\vec{\Delta}\psi\,+\,(\vabla\psi\cdot\vabla\varphi))\;\mathrm{d}^3r\,=\,\oint_{S}\varphi\frac{\partial\psi}{\partial n}\;\mathrm{d}f\]
+\[\int_V(\varphi\Delta\psi\,+\,(\vabla\psi\cdot\vabla\varphi))\;\mathrm{d}^3r\,=\,\oint_{S}\varphi\frac{\partial\psi}{\partial n}\;\mathrm{d}f\]
 
 Wobei $\varphi$ und $\psi$ Skalarfunktionnen sind, angennomen sei $\varphi$ einfach und $\psi$ zweifach stetig differenzierbar.
 
 \subparagraph{2. Green'sche Identität}
-\[\int_V (\varphi\vec{\Delta}\psi-\psi\vec{\Delta}\varphi)\;\mathrm{d}^3r\,=\,\oint_{S}\bigg(\varphi\frac{\partial\psi}{\partial n}-\psi\frac{\partial\varphi}{\partial n}\bigg)\;\mathrm{d}^3f\]
+\[\int_V (\varphi\Delta\psi-\psi\Delta\varphi)\;\mathrm{d}^3r\,=\,\oint_{S}\bigg(\varphi\frac{\partial\psi}{\partial n}-\psi\frac{\partial\varphi}{\partial n}\bigg)\;\mathrm{d}^3f\]
 
 Wobei $\varphi$ und $\psi$ beide zweifach stetig differenzierbar sind.
 
@@ -352,16 +356,82 @@ Sei $F$ ein zweifach stetig differenzierbares Vektorfeld über ein beschränktes
 Wobei die beiden einander ergänzenden Potentiale $\Phi$ und $A$ lassen sich durch die folgenden Integrale aus dem Feld $F$, über das die Felder enthaltende Volumen $V$, gewinnen:
 
 \[
-\Phi\,=\,\frac{1}{4\pi}\int_V \frac{\vabla '\cdot \vec{F}(\vec{r}')}{\left|\vec{r}-\vec{r}'\right|}\;\mathrm{d}V' \qquad\quad
+\vec{\Phi}(\vec{r})\,=\,\frac{1}{4\pi}\int_V \frac{\vabla '\cdot \vec{F}(\vec{r}')}{\left|\vec{r}-\vec{r}'\right|}\;\mathrm{d}V' \qquad\quad
 \vec{A}(\vec{r})\,=\,\frac{1}{4\pi}\int_V \frac{\vabla '\times \vec{F}(\vec{r}')}{\left|\vec{r}-\vec{r}'\right|}\;\mathrm{d}V'
 \]
 
-
-
-
+\subparagraph{Schlussfolgerungen}
+\begin{itemize}
+	\item Ein wirbelfreies Feld ($\vabla\times\vec{a}\,=\,0$) ist ein Gradientenfeld.
+	\item Ein quellenfreies Feld ($\vabla\cdot\vec{a}\,=\,0$) ist ein Rotationsfeld.
+\end{itemize}
 
 \newpage
 \section{Maxwell-Gleichungen der Elektrostatik}
+\paragraph{Differenzielle Darstellung}
+\begin{align*}
+\llap{physikalischer Gauß’scher Satz}\qquad\vabla\cdot\vec{E}\,&=\,\frac{1}{\epsilon_0}\rho\\
+\llap{Faraday'sche Induktionsgesetz}\qquad\vabla\times\vec{E}\,&=\,0
+\end{align*}
+
+\paragraph{Integrale Darstellung}
+\begin{align*}
+\llap{physikalischer Gauß’scher Satz}\qquad\int_S \vec{E}\cdot\mathrm{d}\vec{f}\,&=\,\frac{1}{\epsilon_0}\,q(V)\\
+\llap{Faraday'sche Induktionsgesetz}\qquad\int_{\partial F} \vec{E}\cdot\mathrm{d}\vec{r}\,&=\,0
+\end{align*}
+
+\paragraph{Poisson Gleichung (Einführung)}
+Durch die Einführung  des skalaren Potentials $\phi(\vec{r})$ lassen sich die beiden Maxwell-Gleichungen zusammenfassen zur so gennanten Poisson-Gleichung.
+
+\[\Delta\varphi(\vec{r})\,=\,\frac{1}{\epsilon_0}\,\rho(\vec{r})\]
+
+Die Lösung dieser linearen, inhomogenen, partiellen Differenzialgleichung 2. Ordnung bezeichnet man als das Grundproblem der Elektrostatik. Ist der Raumbereich ladungsfrei, dann bekommt man die Laplace-Gleichung:
+
+\[\Delta\varphi(\vec{r})\,=\,0\]
+
+Die allgemeine Lösung der Poisson-Gleichung lässt sich als Summe einer speziellen Lösung der Poisson-Gleichung und der allgemeinen Lösung der Laplace-Gleichung darstellen.
+
+\section{Elektrostatische Feldenergie}
+\paragraph{Definition}
+Die Energie einer auf einen endlichen Raumbereich beschränkten Ladungskonfiguration $\rho(\vec{r})$ entspricht der Arbeit, die notwendig ist, um Ladungen aus dem Unendlichen $(\varphi(\infty)\,=\,0)$ zu dieser Konfiguration zusammenzuziehen.
+
+\paragraph{Formeln}
+\begin{align*}
+\llap{diskret}\qquad W\,&=\,\frac{1}{4\pi\epsilon_0}\sum_{i=2}^{N}\sum_{j=1}^{i-1}\frac{q_i q_j}{\left|\vec{r}_i - \vec{r}_j \right|}\,=\,\frac{1}{8\pi\epsilon_0}\sum_{\substack{i,j=1\\ i\neq j}}^{N}\,\frac{q_i q_j}{\left|\vec{r}_i - \vec{r}_j \right|}\\
+\llap{kontinuierlich}\qquad W\,&=\,\frac{1}{8\pi\epsilon_0}\int\int\frac{\rho(\vec{r})\rho(\vec{r}')}{\left|\vec{r}_i - \vec{r}_j \right|}\;\mathrm{d}^3r\;\mathrm{d}^3r'\,=\,\frac{1}{2}\int\rho(\vec{r})\varphi(\vec{r})\;\mathrm{d}^3r\\
+W\,&=\,\frac{\epsilon_0}{2}\int\left|\vec{E}(\vec{r})\right|^2\;\mathrm{d}^3r\\
+\llap{Energiedichte}\qquad w\,&=\,\frac{\epsilon_0}{2}\left|\vec{E}(\vec{r})\right|^3
+\end{align*}
+
+\newpage
+\section{Einfache elektrostatische Probleme}
+\paragraph{Methode der Spiegelladungen}
+($eng.$ Method of Image Charges)
+
+\subparagraph{Beschreibung}
+Die Spiegelladung (oder Bildladung) ist eine gedankliche Hilfsstütze, um das Verhalten einer Ladung $Q$ vor einem leitenden Körper im Abstand $R$ zu veranschaulichen. Beim Fall eines Leiters wird die gesamte influenzierte Ladung dafür anschaulich zu einer Punktladung zusammengefasst. Aus Symmetriegründen wird diese Punktladung als Spiegelladung bezeichnet.
+
+\small{\subparagraph{Grundlagen (freiwillig)}
+Wird ein leitender Körper in ein äußeres elektrisches Feld gebracht, so stehen meistens zu Beginn die Feldlinien noch nicht senkrecht auf der Oberfläche. Dies führt zu Potentialunterschieden entlang der Oberfläche, welche die frei beweglichen Elektronen dazu bringen sich so zu verschieben, dass die Feldlinien senkrecht auf die Oberfläche treffen (äußere elektrische Felder nehmen innerhalb leitender Körper exponentiell mit der Zeit ab). Da das äußere elektrische Feld auch Potentialunterschiede im Körper verursacht, bewegen sich die Elektronen innerhalb des Körpers so, dass dort überall das gleiche Potential herrscht. Theoretisch führt das demzufolge zu Oberflächenladungsdichten. Mikroskopisch nah betrachtet halten die Elektronen zueinander einen Abstand und deshalb befinden sich die Influenzladungen immer nur sehr nahe an der Oberfläche, sind aber keine echten Oberflächenladungen.
+\par
+Da die elektrischen Feldlinien senkrecht auf der Oberfläche stehen, verändert der leitende Körper das elektrische Feld so, dass seine Oberfläche mit einer Äquipotentialfläche übereinstimmt. Zur mathematischen Behandlung wird demzufolge zu dem vorhandenen äußeren elektrischen Feld ein zweites elektrisches Feld eingeführt mit der Randbedingung, dass das superponierte Feld senkrecht auf der Oberfläche steht. Dies ist gleichbedeutend mit der Forderung, dass das elektrische Potential an der Oberfläche überall konstant, der Einfachheit halber gleich 0 ist.}
+
+\subparagraph{Punktladung und die ungeladene Metallkugel}
+Sein $r$ und $r'$ die Abstände zur realen- und Spiegelladung, mit Koorinatenursprung im Zentrum des Kugels mit Radius $R$. Dann liegen die beide Ladungen auf einer Gerade, wobei (mittels Kreisspiegelung) gilt:
+
+\begin{align*}
+r'\,&=\,\frac{R^2}{r}\\
+q'\,&=\,q\,\frac{R}{r}
+\end{align*}
+
+\emph{Bem.} Die Platzierung elektrischer Ladungen sollte irrelevant sein.
+
+\section{Randwertprobleme der Elektrostatik}
+\paragraph{Definition}
+\begin{itemize}
+	\item[\textbf{Gegeben:}] thing
+	\item[\textbf{Gesucht:}]	thang
+\end{itemize}
 
 \newpage
 \section{Incomplete/Unassigned}
