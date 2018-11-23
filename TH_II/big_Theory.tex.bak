@@ -1,3 +1,4 @@
+% !TeX spellcheck = de_DE
 \PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass[titlepage,11pt,a4paper,ngerman]{report}
 \usepackage[utf8]{inputenc}
@@ -19,14 +20,14 @@
 \usepackage{tcolorbox}
 \usepackage{enumitem}
 \usepackage[margin=1in]{geometry}
-
 \usepackage{placeins}
 \usepackage{booktabs}
-
 \usepackage{url}
-
 \usetikzlibrary{arrows}
+\usepackage[toc,page]{appendix}
 
+%Change name in TOC
+\renewcommand\appendixtocname{Appendikser}
 
 %Environments und Newcommands:
 
@@ -203,7 +204,7 @@
 \end{align*}
 
 \paragraph{Produktformeln}
-$f, g$ sind skalare Felder, $\vec{F}, \vec{G}$ sind vektor Felder:
+$f, g$ sind skalare Felder, $\vec{F}, \vec{G}$ sind Vektor Felder:
 
 \begin{align*}
  	\vabla(fg) &= f \vabla (g) + g \vabla (f)\\
@@ -334,7 +335,7 @@ Sei $\psi$ ein mindestens zweimal stetig differenzierbares, skalares Feld auf ei
 \subparagraph{1. Green'sche Identität}
 \[\int_V(\varphi\Delta\psi\,+\,(\vabla\psi\cdot\vabla\varphi))\;\mathrm{d}^3r\,=\,\oint_{S}\varphi\frac{\partial\psi}{\partial n}\;\mathrm{d}f\]
 
-Wobei $\varphi$ und $\psi$ Skalarfunktionnen sind, angennomen sei $\varphi$ einfach und $\psi$ zweifach stetig differenzierbar.
+Wobei $\varphi$ und $\psi$ Skalarfunktionen sind, angenommen sei $\varphi$ einfach und $\psi$ zweifach stetig differenzierbar.
 
 \subparagraph{2. Green'sche Identität}
 \[\int_V (\varphi\Delta\psi-\psi\Delta\varphi)\;\mathrm{d}^3r\,=\,\oint_{S}\bigg(\varphi\frac{\partial\psi}{\partial n}-\psi\frac{\partial\varphi}{\partial n}\bigg)\;\mathrm{d}^3f\]
@@ -342,14 +343,14 @@ Wobei $\varphi$ und $\psi$ Skalarfunktionnen sind, angennomen sei $\varphi$ einf
 Wobei $\varphi$ und $\psi$ beide zweifach stetig differenzierbar sind.
 
 \bigskip
-\emph{Bemerkung:} Die beiden obengenannent Green'schen Identitäten sind Speziallfällen und gelten nur unter Bedinungen.
+\emph{Bemerkung:} Die beiden oben genannten Green'schen Identitäten sind Spezialfällen und gelten nur unter Bedienungen.
 
 \section{Helmholtz-Zerlegung}
 \paragraph{Bedeutung}
 Zusammengefasst besagen der Satz, dass unter gewissen Voraussetzungen jedes Vektorfeld $\vec{a}(\vec{r})$ eindeutig durch sein Quellenfeld $\vabla\cdot\vec{a}(\vec{r})$ und sein Wirbelfeld $\vabla\times\vec{a}(\vec{r})$ bestimmt ist. Oder anders ausgedrückt: (fast) jedes Vektorfeld lässt sich eindeutig als Summe eines wirbelfreien und eines quellenfreien Anteils darstellen.
 
 \paragraph{Aussage des Theorems}
-Sei $F$ ein zweifach stetig differenzierbares Vektorfeld über ein beschränktes Gebiet im $\mathbb{R}^3$ und $S$ eine Oberfläche welche dieses Gebiet umschliesst. Dann kann $F$ in eine curl-freie Komponente und eine divergenzfreie Komponente zerlegt werden:
+Sei $F$ ein zweifach stetig differenzierbares Vektorfeld über ein beschränktes Gebiet im $\mathbb{R}^3$ und $S$ eine Oberfläche welche dieses Gebiet umschließt. Dann kann $F$ in eine curl-freie Komponente und eine divergenzfreie Komponente zerlegt werden:
 
 \[\vec{F}\,=\,-\vabla\Phi+\vabla\times\vec{A}\]
 
@@ -381,7 +382,7 @@ Wobei die beiden einander ergänzenden Potentiale $\Phi$ und $A$ lassen sich dur
 \end{align*}
 
 \paragraph{Poisson Gleichung (Einführung)}
-Durch die Einführung  des skalaren Potentials $\phi(\vec{r})$ lassen sich die beiden Maxwell-Gleichungen zusammenfassen zur so gennanten Poisson-Gleichung.
+Durch die Einführung  des skalaren Potentials $\phi(\vec{r})$ lassen sich die beiden Maxwell-Gleichungen zusammenfassen zur so genannten Poisson-Gleichung.
 
 \[\Delta\varphi(\vec{r})\,=\,\frac{1}{\epsilon_0}\,\rho(\vec{r})\]
 
@@ -409,15 +410,10 @@ W\,&=\,\frac{\epsilon_0}{2}\int\left|\vec{E}(\vec{r})\right|^2\;\mathrm{d}^3r\\
 ($eng.$ Method of Image Charges)
 
 \subparagraph{Beschreibung}
-Die Spiegelladung (oder Bildladung) ist eine gedankliche Hilfsstütze, um das Verhalten einer Ladung $Q$ vor einem leitenden Körper im Abstand $R$ zu veranschaulichen. Beim Fall eines Leiters wird die gesamte influenzierte Ladung dafür anschaulich zu einer Punktladung zusammengefasst. Aus Symmetriegründen wird diese Punktladung als Spiegelladung bezeichnet.
-
-\small{\subparagraph{Grundlagen (freiwillig)}
-Wird ein leitender Körper in ein äußeres elektrisches Feld gebracht, so stehen meistens zu Beginn die Feldlinien noch nicht senkrecht auf der Oberfläche. Dies führt zu Potentialunterschieden entlang der Oberfläche, welche die frei beweglichen Elektronen dazu bringen sich so zu verschieben, dass die Feldlinien senkrecht auf die Oberfläche treffen (äußere elektrische Felder nehmen innerhalb leitender Körper exponentiell mit der Zeit ab). Da das äußere elektrische Feld auch Potentialunterschiede im Körper verursacht, bewegen sich die Elektronen innerhalb des Körpers so, dass dort überall das gleiche Potential herrscht. Theoretisch führt das demzufolge zu Oberflächenladungsdichten. Mikroskopisch nah betrachtet halten die Elektronen zueinander einen Abstand und deshalb befinden sich die Influenzladungen immer nur sehr nahe an der Oberfläche, sind aber keine echten Oberflächenladungen.
-\par
-Da die elektrischen Feldlinien senkrecht auf der Oberfläche stehen, verändert der leitende Körper das elektrische Feld so, dass seine Oberfläche mit einer Äquipotentialfläche übereinstimmt. Zur mathematischen Behandlung wird demzufolge zu dem vorhandenen äußeren elektrischen Feld ein zweites elektrisches Feld eingeführt mit der Randbedingung, dass das superponierte Feld senkrecht auf der Oberfläche steht. Dies ist gleichbedeutend mit der Forderung, dass das elektrische Potential an der Oberfläche überall konstant, der Einfachheit halber gleich 0 ist.}
+Die Spiegelladung (oder Bildladung) ist eine gedankliche Hilfsstütze, um das Verhalten einer Ladung $Q$ vor einem leitenden Körper im Abstand $R$ zu veranschaulichen. Beim Fall eines Leiters wird die gesamte influenzierte Ladung dafür anschaulich zu einer Punktladung zusammengefasst. Aus Symmetriegründen wird diese Punktladung als Spiegelladung bezeichnet. (für physikalische Grundlagen siehe Appendix\ref{imagechargestheory})
 
 \subparagraph{Punktladung und die ungeladene Metallkugel}
-Sein $r$ und $r'$ die Abstände zur realen- und Spiegelladung, mit Koorinatenursprung im Zentrum des Kugels mit Radius $R$. Dann liegen die beide Ladungen auf einer Gerade, wobei (mittels Kreisspiegelung) gilt:
+Sein $r$ und $r'$ die Abstände zur realen- und Spiegelladung, mit Koordinatenursprung im Zentrum des Kugels mit Radius $R$. Dann liegen die beide Ladungen auf einer Gerade, wobei (mittels Kreisspiegelung) gilt:
 
 \begin{align*}
 r'\,&=\,\frac{R^2}{r}\\
@@ -426,12 +422,46 @@ q'\,&=\,q\,\frac{R}{r}
 
 \emph{Bem.} Die Platzierung elektrischer Ladungen sollte irrelevant sein.
 
+\paragraph{Elektrisches Potential einer homogen geladenen Kugel}
+Das Problem das
+
 \section{Randwertprobleme der Elektrostatik}
+\paragraph{Formulierung des Problems}
+Das Ziel ist Lösung der Poisson-Gleichung zu finden, was man als das Grundproblem der Elektrostatik bezeichnet. Falls die das Potential $\varphi(\vec{r})$ erzeugende Ladungsdichte $\rho(\vec{r}')$ bekannt ist und keine spezielle Randbedinungen auf Grenzflächen im Endlichen zu erfüllen sind, dann reicht die folgende allgemeine Lösung völlig aus:
+
+\[\varphi(\vec{r})\,=\,\frac{1}{4\pi\epsilon_0}\int\frac{\rho(\vec{r}')}{\left|\vec{r}-\vec{r}'\right|}\;\mathrm{d}^3r'\qquad\rlap{Poisson-Integral}\]
+
+Ist $\rho$ räumlich begrenzt, so gilt insbesondere
+
+\[\varphi\xrightarrow[r\rightarrow\infty]{}0\ ;\qquad\vabla\varphi\xrightarrow[r\rightarrow\infty]{}0\]
+\noindent
+Dies ist jedoch bei vielen praktischen Problemen nicht der eigentliche Ausgangspunkt.
+
 \paragraph{Definition}
-\begin{itemi}[leftmargin=3cm]
-	\item[\textbf{Gegeben:}] $\rho(\vec{r}')$ in einem gewissen Raumbereich $V$, $\varphi$ oder $\frac{\partial\varphi}{\partial n}\,=\,-\vec{E}\cdot n$
-	\item[\textbf{Gesucht:}] Das skalare Potential $\varphi(\vec{r})$ in allen Punkten $\vec{r}$ des interessierenden Raumbereichs $V$.
-\end{enumerate}
+\begin{itemize}[leftmargin=3cm]
+	\item[\textbf{Gegeben:}] $\rho(\vec{r}')$ in einem gewissen Raumbereich $V$, $\varphi$ oder $\frac{\partial\varphi}{\partial n}\,=\,-\vec{E}\cdot \vec{n}$
+	\item[\textbf{Gesucht:}] Das skalare Potential $\varphi(\vec{r})$ in allen Punkten $\vec{r}$ des interessierenden Raumbereichs $V$
+\end{itemize}
+
+\paragraph{Klassifikation der Randbedingungen}
+\begin{align*}
+\llap{Dirichlet-Randbedingungen}\qquad&\varphi\ \text{auf}\ S(V)\ \text{gegeben}\\
+\llap{Neumann-Randbedingungen}\qquad&\frac{\partial\varphi}{\partial n}\,=\,-\vec{n}\cdot\vec{E}\ \text{auf}\ S(V)\ \text{gegeben}
+\end{align*}
+\noindent
+Von gemischten Randbedingungen spricht man, wenn diese auf S(V) stückweise Dirichlet- und stückweise Neumann-Charakter haben.
+
+\paragraph{Green'sche Funktion}
+\subparagraph{Mathematische Definition}
+Die Green'sche Funktion $G(x, x_0)$ eines linearen Differentialoperators $L\,=\,L(x)$, der auf Verteilungen über einer Teilmenge des euklidischen Raums an einem Punkt $x_0$ wirkt, ist eine Lösung von:
+
+\[LG(x,x_0)\,=\,\delta(x-x_0)\]
+
+wobei $\delta$ die Deltafunktion ist.
+
+\subparagraph{Lösung der Poisson-Gleichung für eine Punktladung $q = 1$}
+\[\qquad \Delta_r G(\vec{r},\vec{r}')=-\frac{1}{\epsilon_0}\delta(\vec{r}-\vec{r}')\]
+
 
 \newpage
 \section{Incomplete/Unassigned}
@@ -440,9 +470,16 @@ q'\,&=\,q\,\frac{R}{r}
 \int_a^bu(x)v'(x)\mathrm{d}x&=[u(x)v(x)]_a^b-\int_a^bu'(x)v(x)\mathrm{d}x\\
 \llap{Dirichlet Randwertproblem}\qquad \Delta_r\mathcal{G}(\vec{r},\vec{r}')&=-\frac{1}{\epsilon_0}\delta(\vec{r}-\vec{r}')\\
 \mathcal{G}(\vec{r},\vec{r}')&=\frac{1}{q}\Phi(\vec{r}\\
-\llap{Poisson-Gleichung}\qquad\Delta\Phi(\vec{r})&=-\frac{1}{\epsilon_0}\rho(\vec{r})\\
 H(x)&\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0\end{cases}
 \end{align*}
+
+\renewcommand\appendixpagename{Anhang}
+\begin{appendices}
+\section{Methode der Spiegelladungen}\label{imagechargestheory}
+Wird ein leitender Körper in ein äußeres elektrisches Feld gebracht, so stehen meistens zu Beginn die Feldlinien noch nicht senkrecht auf der Oberfläche. Dies führt zu Potentialunterschieden entlang der Oberfläche, welche die frei beweglichen Elektronen dazu bringen sich so zu verschieben, dass die Feldlinien senkrecht auf die Oberfläche treffen (äußere elektrische Felder nehmen innerhalb leitender Körper exponentiell mit der Zeit ab). Da das äußere elektrische Feld auch Potentialunterschiede im Körper verursacht, bewegen sich die Elektronen innerhalb des Körpers so, dass dort überall das gleiche Potential herrscht. Theoretisch führt das demzufolge zu Oberflächenladungsdichten. Mikroskopisch nah betrachtet halten die Elektronen zueinander einen Abstand und deshalb befinden sich die Influenzladungen immer nur sehr nahe an der Oberfläche, sind aber keine echten Oberflächenladungen.
+\par
+Da die elektrischen Feldlinien senkrecht auf der Oberfläche stehen, verändert der leitende Körper das elektrische Feld so, dass seine Oberfläche mit einer Äquipotentialfläche übereinstimmt. Zur mathematischen Behandlung wird demzufolge zu dem vorhandenen äußeren elektrischen Feld ein zweites elektrisches Feld eingeführt mit der Randbedingung, dass das superponierte Feld senkrecht auf der Oberfläche steht. Dies ist gleichbedeutend mit der Forderung, dass das elektrische Potential an der Oberfläche überall konstant, der Einfachheit halber gleich 0 ist.
+\end{appendices}
 
 \begin{thebibliography}{9}
 \bibitem{homkugelpot}
