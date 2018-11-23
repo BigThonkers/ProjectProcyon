@@ -30,9 +30,7 @@
 \renewcommand\appendixtocname{Anhang}
 
 %Environments und Newcommands:
-
 % Allgemein:
-
 % zu zeigen symbol
 \newcommand{\zz}{\fontfamily{cmss} \selectfont{Z\kern-.61em\raise-0.7ex\hbox{Z}:}}
 % build over
@@ -40,7 +38,6 @@
 % better looking := (defined as)
 \newcommand*{\defeq}{\mathrel{\vcenter{\baselineskip0.5ex \lineskiplimit0pt \hbox{\scriptsize.}\hbox{\scriptsize.}}}=}
 \newcommand*{\eqdef}{=\mathrel{\vcenter{\baselineskip0.5ex \lineskiplimit0pt \hbox{\scriptsize.}\hbox{\scriptsize.}}}}
-
 
 \newcommand{\hfw}{\color{RubineRed}\tx{ $\star$hier fehlt was$\star$ } \color{black}}
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
@@ -64,7 +61,6 @@
 
 
 %Spezielles:
-
 %Theo:
 \newcommand{\lag}{\mathcal{L}}
 \newcommand{\ham}{\mathcal{H}}
@@ -78,14 +74,12 @@
 %LA:
 \newenvironment{bew}[1]{\subsection{Bew: #1}}{\hfill$\square$}
 \newcommand{\Bew}[2]{\begin{bew}{#1}#2\end{bew}}
-
 \newcommand{\enph}{F: V \to V \textrm{ Endomorphismus}}
 \newcommand{\im}{\tx{im}}
 \newcommand{\spa}{\tx{span}}
 \newcommand{\adj}{\tx{adj}}
 \newcommand{\grad}{\tx{grad}}
 \newcommand{\ord}{\tx{ord}}
-
 \newcommand{\basis}[3]{\{#1_{#2}, \dots, #1_{#3}\}}
 \newcommand{\ska}[2]{\langle #1 , #2 \rangle}
 \newcommand{\dmat}[3]{\begin{pmatrix} #1_{#2}&&\\ &\ddots& \\ && #1_{#3} \end{pmatrix}}
@@ -107,7 +101,6 @@
 \renewcommand{\paragraph}[1]{\subsubsection{#1}}
 
 % Boxen:
-
 \tcbuselibrary{theorems}
 
 % mahlt eine box nur um den text mit tittel
@@ -139,15 +132,17 @@
 \end{array}}
 
 % evtl: \renewcommand{\boxed}{\rmbox}
-
-
-
+%\renewcommand{\thechapter}{\Roman{chapter}}
 \hbadness=99999
 
-\begin{document}
-	
-%\renewcommand{\thechapter}{\Roman{chapter}}
 
+
+
+
+
+
+
+\begin{document}
 \title{
 	{\Huge Theoretische Physik II\\[3pt]Elektrodynamik}\\[1em]
 	{\Large Vorlesung von Prof. Dr. Michael Thoss im Wintersemester 2018}}
@@ -413,7 +408,7 @@ Zur Lösung des Problems können wir das Poisson-Integral verwenden. \cite{homku
 ($eng.$ Method of Image Charges)
 
 \subparagraph{Beschreibung}
-Die Spiegelladung (oder Bildladung) ist eine gedankliche Hilfsstütze, um das Verhalten einer Ladung $Q$ vor einem leitenden Körper im Abstand $R$ zu veranschaulichen. Beim Fall eines Leiters wird die gesamte influenzierte Ladung dafür anschaulich zu einer Punktladung zusammengefasst. Aus Symmetriegründen wird diese Punktladung als Spiegelladung bezeichnet. (für physikalische Grundlagen siehe Appendix\ref{imagechargestheory})
+Die Spiegelladung (oder Bildladung) ist eine gedankliche Hilfsstütze, um das Verhalten einer Ladung $Q$ vor einem leitenden Körper im Abstand $R$ zu veranschaulichen. Beim Fall eines Leiters wird die gesamte influenzierte Ladung dafür anschaulich zu einer Punktladung zusammengefasst. Aus Symmetriegründen wird diese Punktladung als Spiegelladung bezeichnet. (für physikalische Grundlagen siehe Anhang\ref{imagechargestheory})
 
 \subparagraph{Punktladung und die ungeladene Metallkugel}
 Sein $r$ und $r'$ die Abstände zur realen- und Spiegelladung, mit Koordinatenursprung im Zentrum des Kugels mit Radius $R$. Dann liegen die beide Ladungen auf einer Gerade, wobei (mittels Kreisspiegelung) gilt:
@@ -461,6 +456,30 @@ wobei $\delta$ die Deltafunktion ist.
 
 \subparagraph{Lösung der Poisson-Gleichung für eine Punktladung $q = 1$}
 \[\qquad \Delta_r G(\vec{r},\vec{r}')=-\frac{1}{\epsilon_0}\delta(\vec{r}-\vec{r}')\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{plz halp: Funktionen der Kugelfläche}
+can someone help me type this up (just need the formulas, I'll do the formatting)\\
+$\implies$\qquad Nolting, p.127-129, the entire pink box
+
+
+
+
+
+
+
 
 
 \newpage

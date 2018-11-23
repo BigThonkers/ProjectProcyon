@@ -27,7 +27,7 @@
 \usepackage[toc,page]{appendix}
 
 %Change name in TOC
-\renewcommand\appendixtocname{Appendikser}
+\renewcommand\appendixtocname{Anhang}
 
 %Environments und Newcommands:
 
@@ -406,11 +406,14 @@ W\,&=\,\frac{\epsilon_0}{2}\int\left|\vec{E}(\vec{r})\right|^2\;\mathrm{d}^3r\\
 
 \newpage
 \section{Einfache elektrostatische Probleme}
+\paragraph{Elektrisches Potential einer homogen geladenen Kugel}
+Zur Lösung des Problems können wir das Poisson-Integral verwenden. \cite{homkugelpot}
+
 \paragraph{Methode der Spiegelladungen}
 ($eng.$ Method of Image Charges)
 
 \subparagraph{Beschreibung}
-Die Spiegelladung (oder Bildladung) ist eine gedankliche Hilfsstütze, um das Verhalten einer Ladung $Q$ vor einem leitenden Körper im Abstand $R$ zu veranschaulichen. Beim Fall eines Leiters wird die gesamte influenzierte Ladung dafür anschaulich zu einer Punktladung zusammengefasst. Aus Symmetriegründen wird diese Punktladung als Spiegelladung bezeichnet. (für physikalische Grundlagen siehe Appendix\ref{imagechargestheory})
+Die Spiegelladung (oder Bildladung) ist eine gedankliche Hilfsstütze, um das Verhalten einer Ladung $Q$ vor einem leitenden Körper im Abstand $R$ zu veranschaulichen. Beim Fall eines Leiters wird die gesamte influenzierte Ladung dafür anschaulich zu einer Punktladung zusammengefasst. Aus Symmetriegründen wird diese Punktladung als Spiegelladung bezeichnet. (für physikalische Grundlagen siehe Anhang\ref{imagechargestheory})
 
 \subparagraph{Punktladung und die ungeladene Metallkugel}
 Sein $r$ und $r'$ die Abstände zur realen- und Spiegelladung, mit Koordinatenursprung im Zentrum des Kugels mit Radius $R$. Dann liegen die beide Ladungen auf einer Gerade, wobei (mittels Kreisspiegelung) gilt:
@@ -421,9 +424,6 @@ q'\,&=\,q\,\frac{R}{r}
 \end{align*}
 
 \emph{Bem.} Die Platzierung elektrischer Ladungen sollte irrelevant sein.
-
-\paragraph{Elektrisches Potential einer homogen geladenen Kugel}
-Das Problem das
 
 \section{Randwertprobleme der Elektrostatik}
 \paragraph{Formulierung des Problems}
@@ -461,6 +461,29 @@ wobei $\delta$ die Deltafunktion ist.
 
 \subparagraph{Lösung der Poisson-Gleichung für eine Punktladung $q = 1$}
 \[\qquad \Delta_r G(\vec{r},\vec{r}')=-\frac{1}{\epsilon_0}\delta(\vec{r}-\vec{r}')\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{plz halp: Funktionen der Kugelfläche}
+can someone help me type this up\\
+Nolting, p.127-129, the entire pink box
+
+
+
+
+
+
 
 
 \newpage
