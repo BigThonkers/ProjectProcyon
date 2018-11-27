@@ -71,6 +71,7 @@
 \newcommand{\pofr}{\Phi(\vec{r})}
 \newcommand{\delfkt}{\delta(\vec{r} - \vec{r}_0)}
 \newcommand{\gre}{\mathcal G(\vec{r},\vec{r}')}
+\newcommand{\dd}{\mathrm{d}}
 
 %LA:
 \newenvironment{bew}[1]{\subsection{Bew: #1}}{\hfill$\square$}
@@ -455,44 +456,60 @@ Die Green'sche Funktion $G(x, x_0)$ eines linearen Differentialoperators $L\,=\,
 
 wobei $\delta$ die Deltafunktion ist.
 
-\subparagraph{Lösung der Poisson-Gleichung für eine Punktladung $q = 1$}
+\subparagraph{Lösung der Poisson-Gleichung für eine Punktladung $q = 1$} Es gilt:
 \[\qquad \Delta_r G(\vec{r},\vec{r}')=-\frac{1}{\epsilon_0}\delta(\vec{r}-\vec{r}')\]
 
+Wobei die Funktion in $\vec{r}$ und $\vec{r}'$ symmetrisch ist; d.h., wir können den Laplace-Operator auf die Variable $\vec{r}'$ wirken lassen. Die $\delta$-Umformung liefert:
+\[G(\vec{r},\vec{r}')\,=\,\frac{1}{4\pi\epsilon_0}\frac{1}{\left|\vec{r}-\vec{r}'\right|}+f(\vec{r},\vec{r}')\ ,\qquad \nabla_r f(\vec{r},\vec{r}')\,=\,0\qquad\rlap{Bedingung}\]
 
+Für $\vec{r}\in V$ allgemeine Lösung gilt:
+\[\varphi(\vec{r})\,=\,\int_V\rho(\vec{r}')G(\vec{r},\vec{r}')\;\dd^3r'-\epsilon_0\int_{S(V)}\Bigg(\underbrace{\varphi(\vec{r}')\frac{\partial G}{\partial n'}}_{\mathclap{\substack{{=\,0}\\{\text{Neumann}}}}}-\underbrace{G(\vec{r},\vec{r}')\frac{\partial\varphi}{\partial n'}}_{\mathclap{\substack{{=\,0}\\{\text{Dirichlet}}}}}\Bigg)\;\dd f'\]
 
+Wobei je nach Bindungstyp wird ein Teil des Integrals zu null.
 
-
-
-
-
-
-
-
-
+\subparagraph{Green'sche Funktion für die Kugel}
+\begin{align*}
+G_\mathrm{D}(\vec{r},\vec{r}')\,&=\,\frac{1}{4\pi\epsilon_0}\Bigg(\frac{1}{\left|\vec{r}-\vec{r}'\right|}-\frac{1}{\left|\frac{r'}{R}\vec{r}-\frac{R}{r'}\vec{r}'\right|}\Bigg)\\
+&=\,\frac{1}{4\pi\epsilon_0}\Bigg[ (r^2+r'^2-2r\,r'\vec{e}_r\,\cdot\vec{e}_{r'})^{-\nicefrac{1}{2}}+\Big( \frac{r^2r'^2}{R^2}+R^2-2r\,r'\,\vec{e}_r\cdot\vec{e}_{r'} \Big)^{-\nicefrac{1}{2}} \Bigg]
+\end{align*}
 
 \newpage
-\section{plz halp: Funktionen der Kugelfläche}
-can someone help me type this up (just need the formulas, I'll do the formatting)\\
-$\implies$\qquad Nolting, p.127-129, the entire pink box
-% all the equations lets go
-\[\Delta=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\delta}{\delta r}\right)+\frac{1}{r^2}\Delta_{\theta,\vphi}\]
-\[\Delta{\theta,\vphi}=\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\sin\theta\frac{\partial}{\partial\theta}+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\vphi^2}\]
+\section{Funktionen der Kugelfläche}
+In Kugelkoordinaten $(r,\theta,\varphi)$ lässt sich der Laplace-Operator wie folgt schreiben:
+\[\Delta=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\Delta_{\theta,\vphi}\ ,\]
+\[\Delta_{\theta,\vphi}=\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\sin\theta\frac{\partial}{\partial\theta}+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\vphi^2}\ .\]
+
+Die Eigenfunktionen der Operatoren $\Delta_{\theta,\varphi}$ und $i\frac{\partial}{\partial\varphi}$,
+
 \[\Delta_{\theta,\vphi}Y_{lm}(\theta,\vphi)=-l(l+1)Y_{lm}(\theta,\vphi)\]
-\[i\frac{\partial}{\partial\vphi}Y_{lm}(\theta,\vphi}=-mY_{lm}(\theta\vphi)\]
+\[i\frac{\partial}{\partial\vphi}Y_{lm}(\theta,\vphi)=-mY_{lm}(\theta,\vphi)\]
+
+heißen \textbf{Kugelflächenfunktionen} $Y_{lm}(\theta,\vphi)$:
+
 \[Y_{lm}(\theta,\vphi);\ l=0,1,2,\ldots,\ m=-l,-l+1,\ldots,l-1,l\]
 \[Y_{lm}(\theta,\vphi)=\sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}}P_l^m(\cos\theta)\exp(im\vphi)\]
-\[Y_{l-m}(\theta,\vphi)=(-1)^mY_{lm}^\star(\theta,\vphi)\]
-\[P_l^m(z)=(-1)^m(1-z^2)^\nicefrac{m}{2}\frac{\dd^m}{\dd z^m}P_l(z)\]
+\[Y_{l-m}(\theta,\vphi)=(-1)^mY_{lm}^*(\theta,\vphi)\]
+
+$P_l^m(z)$ sind \textbf{zugeordnete Legendre-Polynome}
+
+\[P_l^m(z)=(-1)^m(1-z^2)^{\nicefrac{m}{2}}\frac{\mathrm{d}^m}{\mathrm{d}z^m}P_l(z)\]
 \[P_l^{-m}(z)=(-1)^m\frac{(l-m)!}{(l+m)!}P_l^m(z)\]
+
+Diese sind die Lösungen der verallgemeinerten \textbf{Legendre-Gleichung}:
+
 \[\frac{\dd}{\dd z}\left[(1-z^2)\frac{\dd P}{\dd z}\right]+\left[l(l+1)-\frac{m^2}{1-z^2}\right]P(z)=0\]
+
+mit \textbf{Legendre-Polynome} $P_l(z)$
+
+
 \[P_l(z)=\frac{1}{2^ll!}\frac{\dd^l}{\dd z^l}(z^2-1)^l\]
 \[\frac{\dd}{\dd z}\left[(1-z^2)\frac{\dd P}{\dd z}\right]+l(l+1)P(z)=0\]
 \[P_l(\pm1)=(\pm1)^l\]
 \[\int_{-1}^{+1}\dd zP_l(z)P_k(z)=\frac{2}{2l+1}\delta_{lk}\]
-\[\int_{-1}^{+1}\dd zP_l^m(z)P_k^m(z)=\frac{2}{2l+1}\frac{(1l+m)!}{(l-m)!}\delta_{lk}\]
+\[\int_{-1}^{+1}\dd zP_l^m(z)P_k^m(z)=\frac{2}{2l+1}\frac{(l+m)!}{(l-m)!}\delta_{lk}\]
 \[\int_0^{2\pi}\dd\vphi\exp(i(m-m')\vphi)=2\pi\delta_{mm'}\]
-\[\int_0^{2\pi}\int_{-1}^{+1}\dd\cos\theta Y_{l'm'}^\star(\theta,\vphi)Y_{lm}(\theta\vphi)=\delta_{ll'}\delta_{mm'}\]
-\[\frac{1}{2}\sum_{l=0}^\infty(2l+1)P_l(z')=\delta(z-z')\]
+\[\int_0^{2\pi}\dd\varphi\int_{-1}^{+1}\dd\cos\theta Y_{l'm'}^\star(\theta,\vphi)Y_{lm}(\theta\vphi)=\delta_{ll'}\delta_{mm'}\]
+\[\frac{1}{2}\sum_{l=0}^\infty(2l+1)P_l(z')P_l(z)=\delta(z-z')\]
 
 
 
