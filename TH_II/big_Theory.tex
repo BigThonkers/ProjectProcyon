@@ -220,8 +220,13 @@ $f, g$ sind skalare Felder, $\vec{F}, \vec{G}$ sind Vektor Felder:
 	\vec{\nabla}\times(\vec{a}\times\vec{\nabla}f)&=\vec{a}\Delta f-\vec{\nabla}(\vec{a}\cdot\vec{\nabla}f)
 \end{align*}
 
-\paragraph{Gradienten eines skalaren Feldes}
-$$\vabla g(\vec{r}) = \sum_i \vec{e}_i \frac{1}{\left|\prt{\vec{r}}{u_i}\right|}\prt{}{u_i}g(\vec{r})$$
+
+
+\paragraph{Nutzliche Umformungen}
+\begin{align*}
+\frac{1}{|\vec{r}-\vec{r}'|}\,=\,\frac{1}{\sqrt{r^2+r'^2-2r\,r'\,\cos\theta}}\,=\,\sum_{l=0}^{\infty}\frac{r_<^l}{r_>^{l+1}}P_l(\cos\theta)
+\end{align*}
+
 
 \paragraph{Kugelkoordinaten}
 $$
@@ -555,6 +560,13 @@ Y_{20}\,&=\,\sqrt{\frac{5}{4\pi}}\Bigg(\frac{3}{2}\cos^2\theta-\frac{1}{2}\Bigg)
 \mathcal{G}(\vec{r},\vec{r}')&=\frac{1}{q}\Phi(\vec{r})?\\
 H(x)&\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0\end{cases}
 \end{align*}
+
+\paragraph{Gradienten eines skalaren Feldes}
+$$\vabla g(\vec{r}) = \sum_i \vec{e}_i \frac{1}{\left|\prt{\vec{r}}{u_i}\right|}\prt{}{u_i}g(\vec{r})$$
+\begin{center}
+possibly useless?
+\end{center}
+
 
 \renewcommand\appendixpagename{Anhang}
 \begin{appendices}
