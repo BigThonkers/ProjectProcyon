@@ -73,6 +73,7 @@
 \newcommand{\gre}{\mathcal G(\vec{r},\vec{r}')}
 \newcommand{\dd}{\mathrm{d}}
 
+
 %LA:
 \newenvironment{bew}[1]{\subsection{Bew: #1}}{\hfill$\square$}
 \newcommand{\Bew}[2]{\begin{bew}{#1}#2\end{bew}}
@@ -177,7 +178,7 @@
 \llap{\text{im bel. Raumpunkt}} \qquad \vec{E} (\vec{r}) &= \frac{q}{4 \pi \epsilon_0} \, \frac{\vec{r} - \vec{r}_0}{\left| \vec{r} - \vec{r}_0\right|^3} \\
 \llap{\text{diskrete Ladungsverteilung}} \qquad \vec{E}(\vec{r}) &= \frac{1}{4 \pi \epsilon_0} \, \sum_{j=2}^{n} q_j \, \frac{\vec{r} - \vec{r}_j}{\left| \vec{r} - \vec{r}_j\right|^3} \\
 \llap{\text{kontinuierliche Ladungsverteilung}} \qquad \vec{E}(\vec{r}) &= \frac{1}{4 \pi \epsilon_0} \int \rho (\vec{r}') \, \frac{\vec{r} - \vec{r}'}{\left| \vec{r} - \vec{r}'\right|^3} \; \text{d}^3r' \\
-\llap{\scriptsize(Identität)} \qquad\ \ \Bigg\downarrow \quad \rlap{$ \frac{\vec{r} - \vec{r}'}{\left| \vec{r} - \vec{r}'\right|^3}  \, = \, -\nabla_r\, \frac{1}{\left| \vec{r} - \vec{r}'\right|} $ } \\
+\llap{\scriptsize(Identität)} \qquad\ \ \Bigg\downarrow \quad \rlap{$ \frac{\vec{r} - \vec{r}'}{\left| \vec{r} - \vec{r}'\right|^3}  \, = \, -\nabla_r\, \frac{1}{\left| \vec{r} - \vec{r}'\right|} \quad \text{\scriptsize{wobei}}\quad \vabla_r\frac{1}{\left|\vec{r}-\vec{r}'\right|}=-\vabla_{r'}\frac{1}{\left|\vec{r}-\vec{r}'\right|} $ } \\
 \llap{\text{Beziehung zur Potential}} \qquad \vec{E} (\vec{r}) &= \; - \nabla \, \varphi (\vec{r})\\
 \implies \qquad \vec{\nabla}\times& q\vec{E}\, =\, 0 \qquad \rlap{\scriptsize{d.h., die Coulomb-Kraft ist konservativ}}
 \end{align*}
@@ -238,6 +239,7 @@ $$
 
 wobei:\\
 $r\in \lbrack0\, ,\,\infty)\, ,\quad \Theta\in\lbrack 0\, ,\, \pi\rbrack\, , \quad \varphi\in\lbrack 0\, ,\, 2\pi) $
+
 
 \chapter{Elektrostatik}
 
@@ -473,48 +475,74 @@ G_\mathrm{D}(\vec{r},\vec{r}')\,&=\,\frac{1}{4\pi\epsilon_0}\Bigg(\frac{1}{\left
 &=\,\frac{1}{4\pi\epsilon_0}\Bigg[ (r^2+r'^2-2r\,r'\vec{e}_r\,\cdot\vec{e}_{r'})^{-\nicefrac{1}{2}}+\Big( \frac{r^2r'^2}{R^2}+R^2-2r\,r'\,\vec{e}_r\cdot\vec{e}_{r'} \Big)^{-\nicefrac{1}{2}} \Bigg]
 \end{align*}
 
-\newpage
-\section{Funktionen der Kugelfläche}
+\pagebreak
+\section{Exkurs: Funktionen der Kugelfläche}
 In Kugelkoordinaten $(r,\theta,\varphi)$ lässt sich der Laplace-Operator wie folgt schreiben:
-\[\Delta=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\Delta_{\theta,\vphi}\ ,\]
-\[\Delta_{\theta,\vphi}=\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\sin\theta\frac{\partial}{\partial\theta}+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\vphi^2}\ .\]
+\[\Delta=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\Delta_{\theta,\vphi}\]
+\[\Delta_{\theta,\vphi}=\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\sin\theta\frac{\partial}{\partial\theta}+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\vphi^2}\]
+\noindent
 
 Die Eigenfunktionen der Operatoren $\Delta_{\theta,\varphi}$ und $i\frac{\partial}{\partial\varphi}$,
-
 \[\Delta_{\theta,\vphi}Y_{lm}(\theta,\vphi)=-l(l+1)Y_{lm}(\theta,\vphi)\]
 \[i\frac{\partial}{\partial\vphi}Y_{lm}(\theta,\vphi)=-mY_{lm}(\theta,\vphi)\]
 
 heißen \textbf{Kugelflächenfunktionen} $Y_{lm}(\theta,\vphi)$:
-
 \[Y_{lm}(\theta,\vphi);\ l=0,1,2,\ldots,\ m=-l,-l+1,\ldots,l-1,l\]
 \[Y_{lm}(\theta,\vphi)=\sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}}P_l^m(\cos\theta)\exp(im\vphi)\]
 \[Y_{l-m}(\theta,\vphi)=(-1)^mY_{lm}^*(\theta,\vphi)\]
 
+\noindent
 $P_l^m(z)$ sind \textbf{zugeordnete Legendre-Polynome}
-
 \[P_l^m(z)=(-1)^m(1-z^2)^{\nicefrac{m}{2}}\frac{\mathrm{d}^m}{\mathrm{d}z^m}P_l(z)\]
 \[P_l^{-m}(z)=(-1)^m\frac{(l-m)!}{(l+m)!}P_l^m(z)\]
 
-Diese sind die Lösungen der verallgemeinerten \textbf{Legendre-Gleichung}:
-
+welche die Lösungen der  \textbf{verallgemeinerten Legendre-Gleichung} sind:
 \[\frac{\dd}{\dd z}\left[(1-z^2)\frac{\dd P}{\dd z}\right]+\left[l(l+1)-\frac{m^2}{1-z^2}\right]P(z)=0\]
 
-mit \textbf{Legendre-Polynome} $P_l(z)$
-
-
+\noindent
+$P_l(z)$ sind \textbf{Legendre-Polynome}
 \[P_l(z)=\frac{1}{2^ll!}\frac{\dd^l}{\dd z^l}(z^2-1)^l\]
+
+welche die Lösungen der  \textbf{gewöhnlichen Legendre-Gleichung} sind:
 \[\frac{\dd}{\dd z}\left[(1-z^2)\frac{\dd P}{\dd z}\right]+l(l+1)P(z)=0\]
-\[P_l(\pm1)=(\pm1)^l\]
+\[P_l(\pm1)=(\pm1)^l\qquad\rlap{\scriptsize{nicht auf 1 normiert}}\]
+
+\pagebreak
+\noindent
+Orthogonalitätsrelationen:
 \[\int_{-1}^{+1}\dd zP_l(z)P_k(z)=\frac{2}{2l+1}\delta_{lk}\]
 \[\int_{-1}^{+1}\dd zP_l^m(z)P_k^m(z)=\frac{2}{2l+1}\frac{(l+m)!}{(l-m)!}\delta_{lk}\]
-\[\int_0^{2\pi}\dd\vphi\exp(i(m-m')\vphi)=2\pi\delta_{mm'}\]
+\[\int_0^{2\pi}\dd\vphi \mathrm{e}^{i(m-m'\vphi)}=2\pi\delta_{mm'}\]
 \[\int_0^{2\pi}\dd\varphi\int_{-1}^{+1}\dd\cos\theta Y_{l'm'}^\star(\theta,\vphi)Y_{lm}(\theta\vphi)=\delta_{ll'}\delta_{mm'}\]
+
+\noindent
+Vollständigkeitsrelationen:
 \[\frac{1}{2}\sum_{l=0}^\infty(2l+1)P_l(z')P_l(z)=\delta(z-z')\]
+\[\sum_{l=0}^{\infty}\sum_{m=-l}^{+l}Y_{lm}^*(\theta',\varphi')Y_{lm}(\theta,\varphi)=\delta(\varphi-\varphi')\delta(cos\theta-cos\theta')\]
 
+\noindent
+Entwicklungssatz:
+\[f(\vec{r})=f(r,\theta,\varphi)=\sum_{l=0}^{\infty}\sum_{m=-l}^{+l}R_{lm}(r)Y_{lm}(\theta,\varphi)\]
+\[R_{lm}(r)=\int_0^{2\pi}\dd\varphi\int_{-1}^{+1}\dd \cos\theta f(r,\theta,\varphi)Y_{lm}^*(\theta,\varphi)\]
 
+\noindent
+Additionstheorem:
+\[\sum_{m=-l}^{+l}Y_{lm}^*(\theta',\varphi')Y_{lm}(\theta,\varphi)=\frac{2l+1}{4\pi}P_l(\cos\gamma)\ ,\qquad\gamma=\sphericalangle(\theta'\varphi',\theta\varphi)\]
 
-
-
+\noindent
+Spezielle Funktionen:
+\begin{align*}
+P_0(z)\,&=\,1\\
+P_1(z)\,&=\,z\\
+P_2(z)\,&=\,\frac{1}{2}(3z^2-1)\\
+P_3(z)\,&=\,\frac{1}{2}(5z^3-3z)\ ,\dots;\\
+Y_{00}\,&=\,\frac{1}{\sqrt{4\pi}}\\
+Y_{11}\,&=\,-\sqrt{\frac{3}{8\pi}}\sin\theta e^{i\varphi}\\
+Y_{10}\,&=\,\sqrt{\frac{3}{4\pi}}\cos\theta\\
+Y_{22}\,&=\,\frac{1}{4}\sqrt{\frac{15}{2\pi}}\sin^2\theta e^{2i\varphi}\\
+Y_{21}\,&=\,-\sqrt{\frac{15}{8\pi}}\sin\theta\cos\theta e^{i\varphi}\\
+Y_{20}\,&=\,\sqrt{\frac{5}{4\pi}}\Bigg(\frac{3}{2}\cos^2\theta-\frac{1}{2}\Bigg)\ ,\dots;
+\end{align*}
 
 
 
@@ -524,8 +552,7 @@ mit \textbf{Legendre-Polynome} $P_l(z)$
 \begin{align*}
 \vabla\frac{1}{|\vec{r}-\vec{r}'|}&=-\vabla'\frac{1}{|\vec{r}-\vec{r}'|}\\
 \int_a^bu(x)v'(x)\mathrm{d}x&=[u(x)v(x)]_a^b-\int_a^bu'(x)v(x)\mathrm{d}x\\
-\llap{Dirichlet Randwertproblem}\qquad \Delta_r\mathcal{G}(\vec{r},\vec{r}')&=-\frac{1}{\epsilon_0}\delta(\vec{r}-\vec{r}')\\
-\mathcal{G}(\vec{r},\vec{r}')&=\frac{1}{q}\Phi(\vec{r}\\
+\mathcal{G}(\vec{r},\vec{r}')&=\frac{1}{q}\Phi(\vec{r})?\\
 H(x)&\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0\end{cases}
 \end{align*}
 
