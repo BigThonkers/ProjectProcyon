@@ -103,6 +103,9 @@
 \newcommand{\bem}[1]{\emph{Bemerkung:}}
 \renewcommand{\paragraph}[1]{\subsubsection{#1}}
 
+% DANIIL
+\newcommand{\eq}{\,=\,}
+
 % Boxen:
 \tcbuselibrary{theorems}
 
@@ -158,7 +161,7 @@
 \chapter{Grundbegriffe}
 
 \paragraph{Ladung}
-\begin{align*}
+\begin{align*}\hspace{1cm}
 \llap{\text{diskrete Ladungsverteilung}} \qquad Q &= \sum_{i = 1}^{n} q_i \\
 \llap{\text{kontinuierliche Ladungsverteilung}} \qquad Q &= \int_{V} \rho ( \vec{r} ) \; \text{d}^3r \\
 \llap{\text{Punktladung}} \quad\ \rho ( \vec{r} ) &= q \delta ( \vec{r} - \vec{r}_0)\\
@@ -176,15 +179,15 @@
 \paragraph{Elektrisches Feld}
 \begin{align*}
 \llap{\text{im bel. Raumpunkt}} \qquad \vec{E} (\vec{r}) &= \frac{q}{4 \pi \epsilon_0} \, \frac{\vec{r} - \vec{r}_0}{\left| \vec{r} - \vec{r}_0\right|^3} \\
-\llap{\text{diskrete Ladungsverteilung}} \qquad \vec{E}(\vec{r}) &= \frac{1}{4 \pi \epsilon_0} \, \sum_{j=2}^{n} q_j \, \frac{\vec{r} - \vec{r}_j}{\left| \vec{r} - \vec{r}_j\right|^3} \\
-\llap{\text{kontinuierliche Ladungsverteilung}} \qquad \vec{E}(\vec{r}) &= \frac{1}{4 \pi \epsilon_0} \int \rho (\vec{r}') \, \frac{\vec{r} - \vec{r}'}{\left| \vec{r} - \vec{r}'\right|^3} \; \text{d}^3r' \\
+\llap{\text{diskret}} \qquad \vec{E}(\vec{r}) &= \frac{1}{4 \pi \epsilon_0} \, \sum_{j=2}^{n} q_j \, \frac{\vec{r} - \vec{r}_j}{\left| \vec{r} - \vec{r}_j\right|^3} \\
+\llap{\text{kontinuierlich}} \qquad \vec{E}(\vec{r}) &= \frac{1}{4 \pi \epsilon_0} \int \rho (\vec{r}') \, \frac{\vec{r} - \vec{r}'}{\left| \vec{r} - \vec{r}'\right|^3} \; \text{d}^3r' \\
 \llap{\scriptsize(Identität)} \qquad\ \ \Bigg\downarrow \quad \rlap{$ \frac{\vec{r} - \vec{r}'}{\left| \vec{r} - \vec{r}'\right|^3}  \, = \, -\nabla_r\, \frac{1}{\left| \vec{r} - \vec{r}'\right|} \quad \text{\scriptsize{wobei}}\quad \vabla_r\frac{1}{\left|\vec{r}-\vec{r}'\right|}=-\vabla_{r'}\frac{1}{\left|\vec{r}-\vec{r}'\right|} $ } \\
 \llap{\text{Beziehung zur Potential}} \qquad \vec{E} (\vec{r}) &= \; - \nabla \, \varphi (\vec{r})\\
 \implies \qquad \vec{\nabla}\times& q\vec{E}\, =\, 0 \qquad \rlap{\scriptsize{d.h., die Coulomb-Kraft ist konservativ}}
 \end{align*}
 
 \paragraph{Skalare Elektrische Potential}
-\begin{align*}
+\begin{align*}\hspace{4cm}
 \llap{im bel. Raumpunkt kontinuierlich} \qquad \varphi(\vec{r}) \, &= \, \frac{1}{4\pi\epsilon_0} \, \int \frac{\rho(\vec{r}')}{\left| \vec{r} - \vec{r}'\right|}\;\mathrm{d}^3r'\\
 \llap{im bel. Raumpunkt diskret} \qquad \varphi(\vec{r}) \, &= \, \frac{1}{4\pi\epsilon_0} \, \sum_{j=1}^{n}\, \frac{q_j}{\left| \vec{r} - \vec{r}_j\right|}\\
 \llap{Spannung / Potentialdifferenz} \qquad U(\vec{r},\, \vec{r}_0)\, &=\, \varphi(\vec{r})\, -\, \varphi(\vec{r}_0)\, =\, -\, \int_{\vec{r}_0}^{\vec{r}}\, \vec{E}(\vec{r}')\; \mathrm{d}\vec{r}'\\
@@ -224,7 +227,7 @@ $f, g$ sind skalare Felder, $\vec{F}, \vec{G}$ sind Vektor Felder:
 
 \paragraph{Nutzliche Umformungen}
 \begin{align*}
-\frac{1}{|\vec{r}-\vec{r}'|}\,=\,\frac{1}{\sqrt{r^2+r'^2-2r\,r'\,\cos\theta}}\,=\,\sum_{l=0}^{\infty}\frac{r_<^l}{r_>^{l+1}}P_l(\cos\theta)
+\frac{1}{|\vec{r}-\vec{r}'|}\,=\,\frac{1}{\sqrt{r^2+r'^2-2r\,r'\,\cos\theta}}\,=\,\sum_{l=0}^{\infty}\frac{r_<^l}{r_>^{l+1}}P_l(\cos\theta)\qquad\rlap{\scriptsize{in Kugelkoordinaten}}
 \end{align*}
 
 
@@ -286,7 +289,7 @@ $r\in \lbrack0\, ,\,\infty)\, ,\quad \Theta\in\lbrack 0\, ,\, \pi\rbrack\, , \qu
 \end{align*} 
 
 \subparagraph{Mehrdimensionale Delta-Funktion}
-\begin{align*}
+\begin{align*}\hspace{1.5cm}
 \llap{\text{Kartesisch (x,y,z)}} \qquad \delta(\vec{r} - \vec{r}_0) &= \delta(x - x_0) \, \delta(y - y_0) \, \delta(z - z_0) \\
 \llap{\text{Kugel $ (r, \theta, \varphi) $}} \qquad \delta(\vec{r} - \vec{r}_0) &= \frac{1}{r^2_0 \sin\theta_0} \, \delta(r - r_0) \, \delta(\theta - \theta _0) \, \delta(\varphi - \varphi _0) \\
 \llap{\text{Zylinder $ (\rho , \phi , z) $}} \qquad \delta(\vec{r} - \vec{r}_0) &= \frac{1}{\rho _0} \, \delta(\rho - \rho _0) \, \delta(\varphi - \varphi _0) \, \delta(z - z _0)
@@ -480,8 +483,66 @@ G_\mathrm{D}(\vec{r},\vec{r}')\,&=\,\frac{1}{4\pi\epsilon_0}\Bigg(\frac{1}{\left
 &=\,\frac{1}{4\pi\epsilon_0}\Bigg[ (r^2+r'^2-2r\,r'\vec{e}_r\,\cdot\vec{e}_{r'})^{-\nicefrac{1}{2}}+\Big( \frac{r^2r'^2}{R^2}+R^2-2r\,r'\,\vec{e}_r\cdot\vec{e}_{r'} \Big)^{-\nicefrac{1}{2}} \Bigg]
 \end{align*}
 
+\paragraph{Separation der Variablen}
+Wir suchen nach weiteren Lösungsmethoden für die Poisson-Gleichung,
+\[\Delta\varphi(\vec{r})\,=\,-\frac{1}{\epsilon_0}\rho(\vec{r})\]
+die eine lineare, partielle, inhomogene Differenzialgleichung zweiter Ordnung für ein Gebiet darstellt, auf dessen Rand gewisse Bedingungen vorgeschrieben sind. Benutze:
+\hfill\break
+\[\llap{Separationsansatz}\qquad\varphi(\vec{r})\,=\varphi(x,y,z)\,=\,f(x)\,g(y)\,h(z)\]
+
 \pagebreak
-\section{Exkurs: Funktionen der Kugelfläche}
+\paragraph{Lösung der Laplace-Gleichung in Kugelkoordinaten}
+\subparagraph{Exkurs: Funktionen der Kugelfläche} Siehe Anhang \ref{sphericalfunctions} 
+\subparagraph{Methode} Wir suchen eine Lösung der Laplace-Gleichung $\Phi(r,\theta,\varphi)$ in Kugelkoordinaten. Wir benutzen den Entwicklungssatz, um das Potential $\Phi$ durch diese Funktionen auszudrücken:
+\[\llap{gesucht ist die Lösung von:}\qquad\Delta\Phi(r,\theta,\varphi)\,=\,0\]
+\[\llap{benutze:}\qquad\Phi(r,\theta,\varphi)\,=\,\sum_{l=0}^{\infty}\sum_{m=-l}^{+l}R_{lm}(r)Y_{lm}(\theta,\varphi)\]
+Wir wenden darauf den Laplace-Operator an. Dies führt zu der so genannten Radialgleichung:
+\[\frac{1}{r^2}\frac{\dd R}{\dd r}\left[r^2\frac{\dd R}{\dd r}\right]-\frac{l(l+1)}{r^2}R\,=\,0\]
+Mit einem Ansatz gelöst hat das Potential $\Phi$ damit die allgemeine Gestalt:
+\begin{align*}\hspace{3cm}
+\llap{allgemeine Gestalt:}\qquad\Delta\Phi(r,\theta,\varphi)\,&=\,\sum_{l=0}^{\infty}\sum_{m=-l}^{+l}(A_{lm}r^l+B_{lm}r^{-(l+1)})Y_{lm}(\theta,\varphi)\\
+\llap{azimutaler Symmetrie}\qquad\Delta\Phi(r,\theta)\,&=\,\sum_{l=0}^{\infty}(2l+1)\left[A_{lm}r^l+B_{lm}r^{-(l+1)}\right]P_l(\cos\theta)
+\end{align*}
+
+\paragraph{Potential einer Punktladung}
+Es gibt eine alternative Multipolentwicklung, wenn man den $\nicefrac{1}{|\vec{r}-\vec{r}'|}$ Term nach Kugelflächenfunktionen entwickelt. Es gilt für das Potential der Punktladung:
+\[\Phi(\vec{r})\,=\,\frac{q}{4\pi\epsilon_0 |\vec{r}-\vec{r}_0|}\eq\frac{q}{\epsilon_0 r_>}\sum_{l=0}^{\infty}\sum_{m=-l}^{+l}\frac{l}{2l+1}\left(\frac{r_<}{r_>}^l\right) Y_{lm}^*(\theta_0,\varphi_0)Y_{lm}(\theta,\varphi)\]
+
+wobei $r_>\eq ?$
+
+
+
+
+
+
+
+\newpage
+\section{Incomplete/Unassigned}
+\[\mathcal{G}(\vec{r},\vec{r}')=\frac{1}{q}\Phi(\vec{r})?\]
+
+\paragraph{Still Missing}
+\begin{itemize}
+\item multipole cartesian
+\end{itemize}
+
+%\paragraph{Not very usefull}
+%\subparagraph{Gradienten eines skalaren Feldes}
+%$$\vabla g(\vec{r}) = \sum_i \vec{e}_i \frac{1}{\left|\prt{\vec{r}}{u_i}\right|}\prt{}{u_i}g(\vec{r})$$
+%\int_a^bu(x)v'(x)\mathrm{d}x&=[u(x)v(x)]_a^b-\int_a^bu'(x)v(x)\mathrm{d}x\\
+%H(x)&\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0
+
+
+\renewcommand\appendixpagename{Anhang}
+\begin{appendices}
+\section{Methode der Spiegelladungen}\label{imagechargestheory}
+Wird ein leitender Körper in ein äußeres elektrisches Feld gebracht, so stehen meistens zu Beginn die Feldlinien noch nicht senkrecht auf der Oberfläche. Dies führt zu Potentialunterschieden entlang der Oberfläche, welche die frei beweglichen Elektronen dazu bringen sich so zu verschieben, dass die Feldlinien senkrecht auf die Oberfläche treffen (äußere elektrische Felder nehmen innerhalb leitender Körper exponentiell mit der Zeit ab). Da das äußere elektrische Feld auch Potentialunterschiede im Körper verursacht, bewegen sich die Elektronen innerhalb des Körpers so, dass dort überall das gleiche Potential herrscht. Theoretisch führt das demzufolge zu Oberflächenladungsdichten. Mikroskopisch nah betrachtet halten die Elektronen zueinander einen Abstand und deshalb befinden sich die Influenzladungen immer nur sehr nahe an der Oberfläche, sind aber keine echten Oberflächenladungen.
+\par
+Da die elektrischen Feldlinien senkrecht auf der Oberfläche stehen, verändert der leitende Körper das elektrische Feld so, dass seine Oberfläche mit einer Äquipotentialfläche übereinstimmt. Zur mathematischen Behandlung wird demzufolge zu dem vorhandenen äußeren elektrischen Feld ein zweites elektrisches Feld eingeführt mit der Randbedingung, dass das superponierte Feld senkrecht auf der Oberfläche steht. Dies ist gleichbedeutend mit der Forderung, dass das elektrische Potential an der Oberfläche überall konstant, der Einfachheit halber gleich 0 ist.
+\end{appendices}
+
+\section{Funktionen der Kugelfläche}\label{sphericalfunctions}
+Die Kugelflächenfunktionen sind ein vollständiger und orthonormaler Satz von Eigenfunktionen des Winkelanteils des Laplace-Operators. Dieser Winkelanteil zeigt sich, wenn der Laplace-Operator in Kugelkoordinaten geschrieben wird. Die Kugelflächenfunktionen haben eine große Bedeutung für die Lösung partieller Differentialgleichungen. Sie treten zum Beispiel bei der Berechnung von Atomorbitalen auf, da die beschreibende zeitunabhängige Schrödingergleichung den Laplace-Operator enthält und sich das Problem am besten in Kugelkoordinaten lösen lässt.\hfill\break
+\\
 In Kugelkoordinaten $(r,\theta,\varphi)$ lässt sich der Laplace-Operator wie folgt schreiben:
 \[\Delta=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\Delta_{\theta,\vphi}\]
 \[\Delta_{\theta,\vphi}=\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\sin\theta\frac{\partial}{\partial\theta}+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\vphi^2}\]
@@ -512,7 +573,6 @@ welche die Lösungen der  \textbf{gewöhnlichen Legendre-Gleichung} sind:
 \[\frac{\dd}{\dd z}\left[(1-z^2)\frac{\dd P}{\dd z}\right]+l(l+1)P(z)=0\]
 \[P_l(\pm1)=(\pm1)^l\qquad\rlap{\scriptsize{nicht auf 1 normiert}}\]
 
-\pagebreak
 \noindent
 Orthogonalitätsrelationen:
 \[\int_{-1}^{+1}\dd zP_l(z)P_k(z)=\frac{2}{2l+1}\delta_{lk}\]
@@ -548,33 +608,6 @@ Y_{22}\,&=\,\frac{1}{4}\sqrt{\frac{15}{2\pi}}\sin^2\theta e^{2i\varphi}\\
 Y_{21}\,&=\,-\sqrt{\frac{15}{8\pi}}\sin\theta\cos\theta e^{i\varphi}\\
 Y_{20}\,&=\,\sqrt{\frac{5}{4\pi}}\Bigg(\frac{3}{2}\cos^2\theta-\frac{1}{2}\Bigg)\ ,\dots;
 \end{align*}
-
-
-
-
-\newpage
-\section{Incomplete/Unassigned}
-\begin{align*}
-\vabla\frac{1}{|\vec{r}-\vec{r}'|}&=-\vabla'\frac{1}{|\vec{r}-\vec{r}'|}\\
-\int_a^bu(x)v'(x)\mathrm{d}x&=[u(x)v(x)]_a^b-\int_a^bu'(x)v(x)\mathrm{d}x\\
-\mathcal{G}(\vec{r},\vec{r}')&=\frac{1}{q}\Phi(\vec{r})?\\
-H(x)&\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0\end{cases}
-\end{align*}
-
-\paragraph{Gradienten eines skalaren Feldes}
-$$\vabla g(\vec{r}) = \sum_i \vec{e}_i \frac{1}{\left|\prt{\vec{r}}{u_i}\right|}\prt{}{u_i}g(\vec{r})$$
-\begin{center}
-possibly useless?
-\end{center}
-
-
-\renewcommand\appendixpagename{Anhang}
-\begin{appendices}
-\section{Methode der Spiegelladungen}\label{imagechargestheory}
-Wird ein leitender Körper in ein äußeres elektrisches Feld gebracht, so stehen meistens zu Beginn die Feldlinien noch nicht senkrecht auf der Oberfläche. Dies führt zu Potentialunterschieden entlang der Oberfläche, welche die frei beweglichen Elektronen dazu bringen sich so zu verschieben, dass die Feldlinien senkrecht auf die Oberfläche treffen (äußere elektrische Felder nehmen innerhalb leitender Körper exponentiell mit der Zeit ab). Da das äußere elektrische Feld auch Potentialunterschiede im Körper verursacht, bewegen sich die Elektronen innerhalb des Körpers so, dass dort überall das gleiche Potential herrscht. Theoretisch führt das demzufolge zu Oberflächenladungsdichten. Mikroskopisch nah betrachtet halten die Elektronen zueinander einen Abstand und deshalb befinden sich die Influenzladungen immer nur sehr nahe an der Oberfläche, sind aber keine echten Oberflächenladungen.
-\par
-Da die elektrischen Feldlinien senkrecht auf der Oberfläche stehen, verändert der leitende Körper das elektrische Feld so, dass seine Oberfläche mit einer Äquipotentialfläche übereinstimmt. Zur mathematischen Behandlung wird demzufolge zu dem vorhandenen äußeren elektrischen Feld ein zweites elektrisches Feld eingeführt mit der Randbedingung, dass das superponierte Feld senkrecht auf der Oberfläche steht. Dies ist gleichbedeutend mit der Forderung, dass das elektrische Potential an der Oberfläche überall konstant, der Einfachheit halber gleich 0 ist.
-\end{appendices}
 
 \begin{thebibliography}{9}
 \bibitem{homkugelpot}
