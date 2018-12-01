@@ -523,7 +523,6 @@ Eine Multipolentwicklung ist eine mathematische Reihe einer winkelabhängigen Fu
 
 \paragraph{Methode}
 Wir betrachten eine statische, lokalisierte Ladungsverteilung:
-
 \[\rho(\vec{r})\eq \rho(r,\theta,\varphi)\eq \begin{cases}
 	\mathrm{beliebig} \, , & r<R_0 \\
 	0 \, , & r>R_0 \\
@@ -540,7 +539,10 @@ Unter Verwendung von Kugelflächenfunktionen gilt für den Potential:
 \end{align*}
 \noindent
 sphärische Multipolmomente:
-\[q_{lm}\eq \sqrt{\frac{4\pi}{2l+1}}\int\dd^3 r'\ \rho(\vec{r}')r'^l\,Y_{lm}^*(\theta ', \varphi ')\]
+\begin{align*}
+q_{lm}&\eq \sqrt{\frac{4\pi}{2l+1}}\int\dd^3 r'\ \rho(\vec{r}')r'^l\,Y_{lm}^*(\theta ', \varphi ')\\
+\llap{\scriptsize{zylindersymmetrische Fall}}\qquad q_{l0}&\eq\int\dd^3r\ \rho(r,\theta)r^l P_l(\cos\theta)\qquad\rlap{wobei $\rho\eq (r,\theta)\, ,\quad q_{l0}\eq \delta_{m0}$}
+\end{align*}
 
 \paragraph{Kartesische Darstellung}
 Sei $\nicefrac{1}{|\vec{r}-\vec{r}'|}\eq [(x_1-x_1')^2+(x_2-x_2')^2+(x_3-x_3')^2]^{\nicefrac{1}{2}}$. Dann gilt:
@@ -560,15 +562,9 @@ Unter orthogonalen Transformationen ist $q$ ein Skalar, $p_i$ ein Vektor und $Q_
 
 
 
-
-
 \newpage
-\section{Incomplete/Unassigned}
-
-\paragraph{Still Missing}
-\begin{itemize}
-\item multipole cartesian
-\end{itemize}
+\section{Elektrostatik in Materie - Dielektrika}
+Siehe Skript von Markus Österle und Andréz Gockel.
 
 %\paragraph{Not very usefull}
 %\subparagraph{Gradienten eines skalaren Feldes}
