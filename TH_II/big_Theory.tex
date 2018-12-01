@@ -152,7 +152,8 @@
 \title{
 	{\Huge Theoretische Physik II\\[3pt]Elektrodynamik}\\[1em]
 	{\Large Vorlesung von Prof. Dr. Michael Thoss im Wintersemester 2018}}
-\author{Andréz Gockel \\ Patrick Munnich \\ Daniil Aktanka}
+\author{Daniil Aktanka \\ Patrick Munnich \\ Andréz Gockel}
+
 \maketitle
 \tableofcontents
 
@@ -225,10 +226,9 @@ $f, g$ sind skalare Felder, $\vec{F}, \vec{G}$ sind Vektor Felder:
 
 
 
-\paragraph{Nutzliche Umformungen}
-\begin{align*}
-\frac{1}{|\vec{r}-\vec{r}'|}\,=\,\frac{1}{\sqrt{r^2+r'^2-2r\,r'\,\cos\theta}}\,=\,\sum_{l=0}^{\infty}\frac{r_<^l}{r_>^{l+1}}P_l(\cos\theta)\qquad\rlap{\scriptsize{in Kugelkoordinaten}}
-\end{align*}
+\paragraph{Additionstheorem}
+\[\frac{1}{|\vec{r}-\vec{r}'|}\,=\,\frac{1}{\sqrt{r^2+r'^2-2r\,r'\,\cos\theta}}\,=\,\sum_{l=0}^{\infty}\frac{r_<^l}{r_>^{l+1}}P_l(\cos\theta)\qquad\rlap{\scriptsize{in Kugelkoordinaten}}\]
+\[r_<\eq \mathrm{min}(r,r')\ ,\qquad r_>\eq \mathrm{max}(r,r')\]
 
 
 \paragraph{Kugelkoordinaten}
@@ -451,7 +451,7 @@ Dies ist jedoch bei vielen praktischen Problemen nicht der eigentliche Ausgangsp
 \end{itemize}
 
 \paragraph{Klassifikation der Randbedingungen}
-\begin{align*}
+\begin{align*}\hspace{2cm}
 \llap{Dirichlet-Randbedingungen}\qquad&\varphi\ \text{auf}\ S(V)\ \text{gegeben}\\
 \llap{Neumann-Randbedingungen}\qquad&\frac{\partial\varphi}{\partial n}\,=\,-\vec{n}\cdot\vec{E}\ \text{auf}\ S(V)\ \text{gegeben}
 \end{align*}
@@ -479,7 +479,7 @@ Wobei je nach Bindungstyp wird ein Teil des Integrals zu null.
 
 \subparagraph{Green'sche Funktion für die Kugel}
 \begin{align*}
-G_\mathrm{D}(\vec{r},\vec{r}')\,&=\,\frac{1}{4\pi\epsilon_0}\Bigg(\frac{1}{\left|\vec{r}-\vec{r}'\right|}-\frac{1}{\left|\frac{r'}{R}\vec{r}-\frac{R}{r'}\vec{r}'\right|}\Bigg)\\
+G_\mathrm{D}(\vec{r},\vec{r}')\,&=\,\frac{1}{4\pi\epsilon_0}\Bigg(\frac{1}{\left|\vec{r}-\vec{r}'\right|}-\frac{1}{\left|\frac{r'}{R}\vec{r}-\frac{R}{r'}\vec{r}'\right|}\Bigg)\eq \frac{1}{q}\Phi(\vec{r})\qquad\rlap{\scriptsize{mit $\Phi$ Potential hom. gel. Kugel}}\\
 &=\,\frac{1}{4\pi\epsilon_0}\Bigg[ (r^2+r'^2-2r\,r'\vec{e}_r\,\cdot\vec{e}_{r'})^{-\nicefrac{1}{2}}+\Big( \frac{r^2r'^2}{R^2}+R^2-2r\,r'\,\vec{e}_r\cdot\vec{e}_{r'} \Big)^{-\nicefrac{1}{2}} \Bigg]
 \end{align*}
 
@@ -500,15 +500,61 @@ Wir wenden darauf den Laplace-Operator an. Dies führt zu der so genannten Radia
 \[\frac{1}{r^2}\frac{\dd R}{\dd r}\left[r^2\frac{\dd R}{\dd r}\right]-\frac{l(l+1)}{r^2}R\,=\,0\]
 Mit einem Ansatz gelöst hat das Potential $\Phi$ damit die allgemeine Gestalt:
 \begin{align*}\hspace{3cm}
-\llap{allgemeine Gestalt:}\qquad\Delta\Phi(r,\theta,\varphi)\,&=\,\sum_{l=0}^{\infty}\sum_{m=-l}^{+l}(A_{lm}r^l+B_{lm}r^{-(l+1)})Y_{lm}(\theta,\varphi)\\
+\llap{allgemeine Gestalt}\qquad\Delta\Phi(r,\theta,\varphi)\,&=\,\sum_{l=0}^{\infty}\sum_{m=-l}^{+l}(A_{lm}r^l+B_{lm}r^{-(l+1)})Y_{lm}(\theta,\varphi)\\
 \llap{azimutaler Symmetrie}\qquad\Delta\Phi(r,\theta)\,&=\,\sum_{l=0}^{\infty}(2l+1)\left[A_{lm}r^l+B_{lm}r^{-(l+1)}\right]P_l(\cos\theta)
 \end{align*}
 
 \paragraph{Potential einer Punktladung}
-Es gibt eine alternative Multipolentwicklung, wenn man den $\nicefrac{1}{|\vec{r}-\vec{r}'|}$ Term nach Kugelflächenfunktionen entwickelt. Es gilt für das Potential der Punktladung:
+Es gibt eine alternative Multipolentwicklung, wenn man den $\nicefrac{1}{|\vec{r}-\vec{r}'|}$ Term nach Kugelflächenfunktionen entwickelt. Wir denken uns eine Kugel mit dem Koordinatenursprung als Mittelpunkt und dem Radius $r_0$.  Es gilt für das Potential der Punktladung:
 \[\Phi(\vec{r})\,=\,\frac{q}{4\pi\epsilon_0 |\vec{r}-\vec{r}_0|}\eq\frac{q}{\epsilon_0 r_>}\sum_{l=0}^{\infty}\sum_{m=-l}^{+l}\frac{l}{2l+1}\left(\frac{r_<}{r_>}^l\right) Y_{lm}^*(\theta_0,\varphi_0)Y_{lm}(\theta,\varphi)\]
+wobei die folgende Notation eingeführt wurde:
+\begin{gather*}
+\text{innerhalb}\ (r<r_0):\qquad r\eq r_<\ , \quad r_0\eq r_>\\
+\text{außerhalb}\ (r>r_0):\qquad r\eq r_>\ , \quad r_0\eq r_<
+\end{gather*}
 
-wobei $r_>\eq ?$
+\pagebreak
+\subsection{Multipolentwicklung}
+\sloppy
+Eine Multipolentwicklung ist eine mathematische Reihe einer winkelabhängigen Funktion. In Physik ist es normalerweise die Reihenentwicklung eines Potentials, bei der verschiedene Multipol-Momente auftreten. Man unterscheidet zwischen kartesischer und sphärischer Multipolentwicklung.
+
+\paragraph{Definition}
+\subparagraph{Multipol}- eine beliebige räumliche Anordnung von (elektrischen oder anderen) diskreten Ladungen oder, im magnetischen Fall, Dipolen. Durch eine Multipolentwicklung kann ein Potentialfeld durch Punktladungen angenähert werden.
+
+\paragraph{Methode}
+Wir betrachten eine statische, lokalisierte Ladungsverteilung:
+
+\[\rho(\vec{r})\eq \rho(r,\theta,\varphi)\eq \begin{cases}
+	\mathrm{beliebig} \, , & r<R_0 \\
+	0 \, , & r>R_0 \\
+\end{cases}\]
+
+Im Bereich $r > R_0$ kann das elektrostatische Potenzial $\Phi$ nach Potenzen von $\nicefrac{R_0}{r}$ entwickelt werden. Diese Multipolentwicklung wird im Folgenden auf zwei Arten abgeleitet.
+
+\paragraph{Sphärische Darstellung}
+Unter Verwendung von Kugelflächenfunktionen gilt für den Potential:
+
+\begin{align*}
+\Phi(\vec{r})&\eq \sum_{l=0}^{\infty}\sum_{m=-l}^{+l}\sqrt{\frac{4\pi}{2l+1}}\frac{q_{lm}}{r^{l+1}}Y_{lm}(\theta,\varphi)\\
+&\eq \frac{q_{00}}{r}+\frac{q_{10}}{r^2}\cos\theta\mp\frac{1}{\sqrt{2}}\frac{q_{1,\pm 1}}{r^2}	\sin\theta\exp(\pm \mathrm{i}\varphi)\pm\dots
+\end{align*}
+\noindent
+sphärische Multipolmomente:
+\[q_{lm}\eq \sqrt{\frac{4\pi}{2l+1}}\int\dd^3 r'\ \rho(\vec{r}')r'^l\,Y_{lm}^*(\theta ', \varphi ')\]
+
+\paragraph{Kartesische Darstellung}
+Sei $\nicefrac{1}{|\vec{r}-\vec{r}'|}\eq [(x_1-x_1')^2+(x_2-x_2')^2+(x_3-x_3')^2]^{\nicefrac{1}{2}}$. Dann gilt:
+
+\[\Phi(\vec{r})\eq \frac{q}{r}+\frac{\vec{p}\cdot\vec{r}}{r^3}+\frac{1}{2}\sum_{i,j\eq 1}^{3}Q_{ij}\frac{x_ix_j}{r^5}+\dots\qquad\tag{$r>R_0$}\]
+\noindent
+kartesische Multipolmomente:
+\begin{align*}
+q&\eq \int\dd^3r'\ \rho(\vec{r}')&&\text{Ladung}\\
+p_i&\eq \int\dd^3r'\ x_i'\,\rho(\vec{r}')&&\text{Dipolmoment}\\
+Q_{ij}&\eq \int\dd^3 r'\ (3x_i'x_j'-r'^2\, \delta_{ij})\rho(\vec{r}')&&\text{Quadrupolmoment}
+\end{align*}
+
+Unter orthogonalen Transformationen ist $q$ ein Skalar, $p_i$ ein Vektor und $Q_{ij}$ ein Tensor zweiter Stufe.
 
 
 
@@ -518,7 +564,6 @@ wobei $r_>\eq ?$
 
 \newpage
 \section{Incomplete/Unassigned}
-\[\mathcal{G}(\vec{r},\vec{r}')=\frac{1}{q}\Phi(\vec{r})?\]
 
 \paragraph{Still Missing}
 \begin{itemize}
