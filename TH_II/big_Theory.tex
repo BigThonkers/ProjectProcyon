@@ -25,6 +25,7 @@
 \usepackage{url}
 \usetikzlibrary{arrows}
 \usepackage[toc,page]{appendix}
+\usepackage{bm}
 
 %Change name in TOC
 \renewcommand\appendixtocname{Anhang}
@@ -95,10 +96,10 @@
 % ANDREZ
 \newcommand{\summ}[2]{\sum_{#1}^{#2}}
 \newcommand{\intt}[2]{\int_{#1}^{#2}}
-\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\renewcommand{\vec}[1]{\bm{#1}}
 \newcommand{\lcom}[1]{\color{MidnightBlue}#1\color{black}}
 \renewcommand{\epsilon}{\varepsilon}
-\newcommand{\vabla}{\boldsymbol{\nabla}}
+\newcommand{\vabla}{\vec{\nabla}}
 \newcommand{\bei}[1]{\emph{Beispiel:}}
 \newcommand{\bem}[1]{\emph{Bemerkung:}}
 \renewcommand{\paragraph}[1]{\subsubsection{#1}}
@@ -574,6 +575,31 @@ Siehe Skript von Markus Österle und Andréz Gockel.
 %$$\vabla g(\vec{r}) = \sum_i \vec{e}_i \frac{1}{\left|\prt{\vec{r}}{u_i}\right|}\prt{}{u_i}g(\vec{r})$$
 %\int_a^bu(x)v'(x)\mathrm{d}x&=[u(x)v(x)]_a^b-\int_a^bu'(x)v(x)\mathrm{d}x\\
 %H(x)&\coloneqq\int_{-\infty}^x\delta(s)\mathrm{d}s=\begin{cases}0&\textrm{for }x<0\\1&\textrm{for }x\geq0
+
+\chapter{Elektrodynamik}
+
+\section{Maxwell-Gleichungen}
+\begin{equation}
+\vabla\cdot\vec{E}=\frac{\rho}{\epsilon_0}\label{Max:1}
+\end{equation}
+
+\begin{equation}
+\vabla\cdot\vec{B}=0\label{Max:2}
+\end{equation}
+
+\begin{equation}
+\vabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\label{Max:3}
+\end{equation}
+
+\begin{equation}
+\vabla\times\vec{B}=\vec{J}+\mu_0\epsilon_0\frac{\partial\vec{E}}{\partial t}\label{Max:4}
+\end{equation}
+
+
+
+
+
+
 
 
 \renewcommand\appendixpagename{Anhang}
