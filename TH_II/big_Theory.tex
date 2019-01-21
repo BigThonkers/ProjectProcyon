@@ -772,11 +772,23 @@ $\vec{F}=q\vec{E}\Rightarrow$
 \[\vec{E}(\vec{r})=\frac{1}{4\pi\vepsilon_0}\sum_{j=1}^Nq_j\frac{\vec{r}-\vec{r}_j}{|\vec{r}-\vec{r}_j|^3}\]
 \[\rho(\vec{r})=q\delta(\vec{r}-\vec{r}_0)\]
 \[\int_V\dd^3r\rho(\vec{r})=q\]
+\[\rho(\vec{r})=q\delta(\vec{r}-\vec{r}_0)\]
 
 Kontinuierliche Ladungsverteilung:
 \[\vec{E}(\vec{r})=\frac{1}{4\pi\vepsilon_0}\int_V\dd^3r'\rho(\vec{r}')\frac{\vec{r}-\vec{r}'}{|\vec{r}-\vec{r}'|^3}\]
 
-%page 8
+Delta-Funktion:
+\[\delta(\vec{r}-\vec{r}_0)=\begin{cases}0&\vec{r}\neq\vec{r}_0\\\infty&\vec{r}=\vec{r}_0\end{cases}\]
+\[\int_V\dd^3rf(\vec{r}\delta(\vec{r}-\vec{r}_0)=\begin{cases}f(\vec{r}_0&\vec{r}_0\in V\\0\vec{r}_0\notin V\end{cases}\]
+\[\Rightarrow\int\dd^3rf(\vec{r})\delta(\vec{r}-\vec{r}_0)=f(\vec{r})\]
+
+\subsection{Feldgleichungen und elektrostatisches Potential}
+\[\vec{E}(\vec{r})=\frac{1}{4\pi\epsilon_0}\int\dd^3r'\rho(\vec{r}')\frac{\vec{r}-\vec{r}'}{|\vec{r}-\vec{r}'|^3}\]
+\[\vec{E}(\vec{r})=-\vabla\phi(\vec{r})\]
+\[\phi(\vec{r})=\frac{1}{4\pi\epsilon_0}\int_{\mathbb{R}^3}\dd^3r'\frac{\rho(\vec{r}')}{|\vec{r}-\vec{r}'|}\]
+
+%page 13
+
 
 
 
