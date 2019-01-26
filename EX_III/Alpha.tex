@@ -214,6 +214,9 @@ Gleichgewicht $n_1$:
 
 \subsection{}
 \[\sum_{n=0}^\infty x^n=\frac{1}{1-x}\]
+\[p_n=\frac{\exp(-\beta E_n)}{\sum_n\exp(-\beta E_n)}\]
+\[\beta=\frac{1}{k_BT}\]
+\[E_n=nhf\]
 
 \subsection{}
 ''Literally nothing''
@@ -458,9 +461,67 @@ Rayleigh-Streuung ist $\omega^4$-abh"angig, also werden niedrige Frequenzen (bla
 \[e^{-\nicefrac{t}{\tau}}\]
 \end{enumerate}
 
+\underline{Ratengleichungen}\\
+Exponentieller Zerfall:
+\[\frac{\dd}{\dd t}n(t)=-\frac{1}{\tau}[n(t)-n_{eq}]\]
+L"osung:
+\[n(t)=[n(0)-n_{eq}]e^{i\frac{t-t_0}{\tau}}+n_{eq}\]
 
+Zwei-Niveausystem ($\Gamma$ Wahrscheinlichkeit, $n$ Besetzungszahl):
+\[\dot{n}_0=-\Gamma_{0\to1}n_0+\Gamma_{1\to0}n_1\]
+\[\dot{n}_1=-\Gamma_{1\to0}n)1+\Gamma_{0\to1}n_0\]
+Gleichgewicht:
+\[\dot{n}_0=-\Gamma(n_0-n_1)\]
+\[\dot{n}_1=-\Gamma(n_1-n_0)\]
+Konstante Gesamtbesetzung:
+\[n_0+n_1=N\]
 
-% page 57
+Einstein Parameter:\\
+Spontane Emission:
+\[\dot{n}_1=-A_{1\to0}n_1\]
+\[\dot{n}_0=+A_{0\to1}n_1\]
+Photon Absorption:
+\[\dot{n}_0=-B_{0\to1}\rho(\nu)n_0\]
+\[\dot{n}_1=+B_{0\to1}\rho(\nu)n_0\]
+Stimulierte Emission:
+\[\dot{n}_0=+B_{1\to0}\rho(\nu)n_1\]
+\[\dot{n}_1=-B_{1\to0}\rho(\nu)n_1\]
+Gleichgewicht $n_0$:
+\[A_{1\to0}n_1-B_{0\to1}\rho(\nu)n_0+B_{1\to0}\rho(\nu)n_1=0\]
+
+\[\rho(\nu)=\frac{8\pi h\nu^3}{c^3}\frac{1}{e^{h\nu}{k_BT}-1}\]
+
+\section{Quantenphysik}
+
+Ideale Gas Gleichung:
+\[PV=N_Ak_BT\]
+
+Millikan Versuch:
+\[m\vec{A}=q\vec{E}+m\vec{g}-\rho V\vec{g}+6\pi nR\vec{v}\]
+
+Rayleigh-Jeans:
+\[w(f,T)=\frac{8\pi f^2}{c^3}kT\]
+
+Besetzungszahldichte im thermodynamischen GGW:
+\[p_n=\frac{e^{-\frac{nhf}{k_BT}}}{\sum_ne^{-\frac{nhf}{k_BT}}}\]
+
+Plank'sches Strahlungsgesetz:
+\[w(f)=\frac{8\pi hf^3}{c^3}\frac{1}{e^\frac{hf}{k_BT}-1}\]
+
+Photoeffekt:\\
+Gegenspannung
+\[U_0=\mathrm{const.}\times f-\frac{W_A}{e}\]
+\[eU=hf-W_A\]
+
+Dispersionsrelation (Compton-Effekt):
+\[E(\vec{p}=cp\]
+\[\vec{p}=\hbar\vec{k},\ k=\frac{2\pi}{\lambda}\]
+
+\[|\vec{E}_0|=\sqrt{\frac{\hbar\omega\rho}{\vepsilon_0}}\]
+QM: Teilchenzahl-Phasen-Unsch"arferelation:
+\[\Delta N\Delta f\geq\Pi\]
+
+% page 77
 
 
 
