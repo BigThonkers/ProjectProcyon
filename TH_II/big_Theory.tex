@@ -722,6 +722,20 @@ Zusatzaufgabe.
 
 \section{Blatt 03}
 
+\subsection{}
+
+Laplace in Kugelkoordinaten:
+\[\Delta=\frac{1}{r^2}\partial_rr^2\partial_r+\frac{1}{r^2\sin^2\phi}\partial_\theta^2+\frac{1}{r^2\sin\phi}\partial_\phi\sin\phi\partial_\phi\]
+
+Poissonsgleichung:
+\[\Delta\Phi(\vec{r})=-\frac{1}{\vepsilon_0}\rho(\vec{r})\]
+
+\[q(R)=\int_{V_R}\dd^3r\rho(\vec{r})\]
+
+\subsection{}
+
+\subsection{}
+
 \section{Blatt 04}
 
 \section{Blatt 05}
@@ -867,7 +881,73 @@ Energiedichte des elektrostatischen Feldes:
 Potenzialdifferenz:
 \[\Phi(\vec{r})-\Phi(0)=-\int_r^{\vec{r}}\dd\vec{r}'\cdot\vec{E}(\vec{r}')=-\frac{\sigma}{\vepsilon_0}x\]
 
-%page 24
+Elektrischer Leiter:
+\begin{enumerate}
+\item $\vec{E}=0$
+\item $\vabla\cdot\vec{E}=0$
+\item Nettoladung befinden sich an Oberfl"ache
+\item $\Phi(\vec{r}_b)-\Phi(\vec{r}_a)=0\Rightarrow\Phi(\vec{r}=\const$
+\end{enumerate}
+
+Randwertproblem hat zwei F"alle:
+\begin{enumerate}
+\item $\Phi(\vec{r})$ auf Randfl"ache, Dirichlet-Randbedingung
+\begin{enumerate}
+\item Spiegelladung
+Randbedingung: \[\Phi(\vec{r})=0\textrm{ f"ur }\vec{r}\in\partial V\Rightarrow\vec{r}=(0,y,z)\]
+Potential Punktladungen in $\vec{r}_0$:
+\[\Phi_q(\vec{r})=\frac{1}{4\pi\vepsilon_0}\frac{q}{|\vec{r}-\vec{r}_0|}\]
+addiere Ladung $-q$ in $\vec{r}_0'=(-d,0,0)=-\vec{r}_0$
+\[\Phi(\vec{r})=\frac{1}{4\pi\vepsilon_0}\left(\frac{q}{|\vec{r}-\vec{r}_0|}-\frac{q}{|\vec{r}+\vec{r}_0|}\right)\]
+$\Rightarrow$ In Poisson-Gleichung einsetzen und schauen ob diese erf"ullt wird.
+\item $\vec{E}(\vec{r})$ auf Randfl"ache, Neumannsche Randbedingung
+Setze
+\[\Psi(\vec{r})\defeq\Phi_1(\vec{r})-\Phi_2(\vec{r})\]
+\[\Delta\Phi(\vec{r})=0\textrm{ f"ur }\vec{r}\in V\]
+\[\Psi(\vec{r})=\Phi_1(\vec{r})-\Phi_2(\vec{r})=0\textrm{ f"ur }\vec{r}\in\partial V\]
+Greensche Identit"at mit $g,\ h$ Funktionen an $V$:
+\begin{align*}
+&\int_V\dd^3r[((\vabla g(\vec{r}))\cdot(\vabla h(\vec{r})))+g(\vec{r})\Delta h(\vec{r})]\\
+=&\int_{\partial V}\dd\vec{f}\cdot(g(\vec{r})\vabla h(\vec{r}))\\
+=&\int_{\partial V}\dd fg(\vec{r}\vec{n}\cdot\vabla h(\vec{r})
+\end{align*}
+$h=g=\Psi$
+\[\Rightarrow\int_V\dd^3r(\vabla\Psi(\vec{r}))^2=0
+\Rightarrow\vabla\Psi(\vec{r})=0\textrm{ f"ur }r\in V\]
+Greensche Funktion der Poisson-Gleichung:
+\[\Delta_rG(\vec{r},\vec{r}')=-\frac{1}{\vepsilon_0}\delta(\vec{r}-\vec{r}')\]
+Zweite Greensche Identit"at:
+\begin{align*}
+&\int_V\dd^3r'(g(\vec{r}')\Delta_{\vec{r}'}h(\vec{r}')-h(\vec{r};)\Delta_{\vec{r}'}g(\vec{r}'))\\
+&\int_{\partial V}\dd\vec{f}'\cdot(g(\vec{r}')\Delta_{\vec{r}'}h(\vec{r}')-h(\vec{r}')\Delta_{\vec{r}'}g(\vec{r}'))
+\end{align*}
+Potential bei Randwertproblem:
+\[\Phi(\vec{r})=\int_V\dd^3r'G(\vec{r},\vec{r}')\rho(\vec{r}')-\vepsilon_0\int_{\partial V}\dd f'\Phi_0(\vec{r}')\frac{\partial}{\partial n'}G(\vec{r},\vec{r}')\]
+\end{enumerate}
+\end{enumerate}
+
+$V$ Ladungsfrei $(\rho(\vec{r})=0\in V)$
+\[\Phi(\vec{r})=\Phi_0\]
+
+$V=\mathbb{R}^3$, lokalisierte Ladungsverteilung $\rho$:
+\[G(\vec{r},\vec{r}')=\frac{1}{4\pi\vepsilon_0}\frac{1}{|\vec{r}-\vec{r}'|}\]
+
+Greensche Funktion des Dirichlet Randwertproblems einer Ebene
+\[G(\vec{r},\vec{r}')=\frac{1}{q}\Phi(\vec{r})=\frac{1}{4\pi\vepsilon}\left(\frac{1}{|\vec{r}-\vec{r}'|}-\frac{1}{|\vec{r}-\tilde{\vec{r}}'|}\right)\]
+
+Laplace-Gleichung: \[\Delta\Phi=0+\mathrm{Randbedingung}\]
+
+Separationsansatz $\Phi(x,y,)=f(x)g(y)$
+\[\Delta\Phi=\frac{\dd^2f}{\dd x^2}g(y)+f(x)\frac{\dd^2g}{\dd y^2}\]
+
+Ansatz allgemeine L"osung:
+\[\Phi(x,y)=\sum_{n=1}^\infty A_n\sin\left(\frac{n\pi x}{l_x}\right)\sinh\left(\frac{n\pi y}{l_x}\right)\]
+\[\Phi_R(x,y)=\sum_{n=1}^\infty A_n\sin\left(\frac{n\pi x}{l_x}\right)\sinh\left(\frac{n\pi l_y}{l_x}\right)\]
+
+\[A_n=\frac{2}{l_x\sinh\left(\frac{n\pi l_y}{l_z}\right)}\int_0^{l_x}\dd x\sin\left(\frac{n\pi x}{l_x}\right)\Phi_R(x)\]
+
+
+%page 34
 
 
 
